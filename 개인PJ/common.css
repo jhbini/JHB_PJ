@@ -1,1 +1,59 @@
 @charset "utf-8";
+
+body * {
+  outline: 1px dashed gray;
+}
+
+/* 1. 상단영역 */
+#top{
+    background-color: #fff;
+
+}
+
+/* 1-1 메인로고 */
+.logo{
+    padding: 20px;
+    text-align: center;
+}
+
+/* sns로고 */
+.sns{
+    position: relative;
+}
+.sns>ul{
+    display: flex;
+    position: absolute;
+    top: -80px;
+    left: 10px;
+}
+.rev{
+    position: absolute;
+    top: -80px;
+    right: 10px;
+}
+
+/* gnb메뉴 */
+.gnb{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.tm{
+    display: flex;
+    justify-content: center;
+}
+.gnb>ul>li{
+    padding: 0 20px;
+}
+.gnb>ul>li>a{
+    display: block;
+    font-size: 1.7rem;
+    line-height: 5rem;
+}
+
+/* 서브메뉴 */
+.smenu{
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+}
