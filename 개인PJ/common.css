@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/* 상단/하단 영역 */
+
 body * {
   outline: 1px dashed gray;
 }
@@ -23,13 +25,25 @@ body * {
 .sns>ul{
     display: flex;
     position: absolute;
-    top: -80px;
+    top: -70px;
     left: 10px;
 }
 .rev{
     position: absolute;
-    top: -80px;
-    right: 10px;
+    padding: 3px 10px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    top: -70px;
+    right: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.rev:hover{
+    background-color: rgb(56, 53, 53);
+}
+.rev:hover a{
+    color: #fff;
 }
 
 /* gnb메뉴 */
@@ -41,9 +55,11 @@ body * {
 .tm{
     display: flex;
     justify-content: center;
+    white-space: nowrap;
 }
 .gnb>ul>li{
-    padding: 0 20px;
+    padding: 0 30px;
+    width: 150px;
 }
 .gnb>ul>li>a{
     display: block;
@@ -54,6 +70,31 @@ body * {
 /* 서브메뉴 */
 .smenu{
     position: absolute;
-    height: 0;
+    width: 150px;
+    opacity: 0;
     overflow: hidden;
+    background-color: #fff;
+    transition: opacity .4s ease-in-out;
+    clip-path: polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0 calc(100% - 7px), 0 7px);
+}
+.smenu li{
+    padding: 10px;
+}
+.smenu a{
+    font-size: 1.5rem;
+}
+.gnb>ul>li:nth-child(1):hover .smenu{
+    opacity: 100%;
+}
+.gnb>ul>li:nth-child(3):hover .smenu{
+    opacity: 100%;
+}
+.gnb>ul>li:nth-child(4):hover .smenu{
+    opacity: 100%;
+}
+.gnb>ul>li:nth-child(5):hover .smenu{
+    opacity: 100%;
+}
+.gnb>ul>li:nth-child(6):hover .smenu{
+    opacity: 100%;
 }
