@@ -3,38 +3,84 @@
 /* 상단/하단 영역 */
 
 body * {
-  outline: 1px dashed gray;
+outline: 1px dashed gray;
 }
 
 /* 1. 상단영역 */
-#top{
-    background-color: #fff;
 
+.top{
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 /* 1-1 메인로고 */
 .logo{
-    padding: 20px;
-    text-align: center;
+    padding: 10px;
+}
+
+/* gnb메뉴 */
+.gnb>ul{
+    display: flex;
+}
+.gnb>ul>li{
+    padding: 0 30px;
+}
+.gnb>ul>li>a{
+display: block;
+    font-size: 2rem;
+    line-height: 5rem;
+}
+.gnb>ul>li>a:hover{
+    color: rgba(200,165,145,1);
+}
+
+/* 서브메뉴 */
+.smenu{
+    position: absolute;
+    z-index: 2;
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease-in-out;
+    /* clip-path: polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0 calc(100% - 7px), 0 7px); */
+}
+.smenu a{
+    display: block;
+    left: 0;
+    font-size: 1.7rem;
+    line-height:4rem;
+}
+
+.gnb>ul>li:hover .smenu,
+.gnb>ul>li.tm:hover::after{
+    height: 50%;
+}
+.gnb>ul>li.tm::after{
+    content: '';
+    display: block;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgb(255, 255, 255);
+    transition: height .4s ease-in-out;
 }
 
 /* sns로고 */
 .sns{
-    position: relative;
+    display: flex;
+    align-items: center;
 }
 .sns>ul{
     display: flex;
-    position: absolute;
-    top: -70px;
-    left: 10px;
+    padding-right: 5vw;
 }
 .rev{
-    position: absolute;
+    white-space: nowrap;
     padding: 3px 10px;
     border: 1px solid #000;
     border-radius: 20px;
-    top: -70px;
-    right: 30px;
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -45,72 +91,3 @@ body * {
 .rev:hover a{
     color: #fff;
 }
-
-/* gnb메뉴 */
-.gnb{
-    padding-top: 20px;
-    text-align: center;
-}
-
-.gnb>ul{
-    display: flex;
-    justify-content: center;
-    white-space: nowrap;
-}
-.gnb>ul>li{
-    padding: 0 30px;
-}
-.gnb>ul>li>a{
-    display: block;
-    font-size: 1.7rem;
-    line-height: 5rem;
-}
-
-/* 서브메뉴 */
-.smenu{
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-    opacity: 0;
-    overflow: hidden;
-    transition: opacity .4s ease-in-out;
-    /* clip-path: polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0 calc(100% - 7px), 0 7px); */
-}
-.smenu a{
-    font-size: 1.5rem;
-}
-.gnb>ul>li:nth-child(1):hover .smenu,
-.gnb>ul>li:nth-child(1):hover::after{
-    height: 30%;
-    opacity: 100%;
-}
-.gnb>ul>li:nth-child(3):hover .smenu,
-.gnb>ul>li:nth-child(3):hover::after{
-    height: 30%;
-    opacity: 100%;
-}
-.gnb>ul>li:nth-child(4):hover .smenu,
-.gnb>ul>li:nth-child(4):hover::after{
-    height: 30%;
-    opacity: 100%;
-}
-.gnb>ul>li:nth-child(5):hover .smenu,
-.gnb>ul>li:nth-child(5):hover::after{
-    height: 30%;
-    opacity: 100%;
-}
-.gnb>ul>li:nth-child(6):hover .smenu,
-.gnb>ul>li:nth-child(6):hover::after{
-    height: 30%;
-    opacity: 100%;
-}
-    .gnb>ul>li.tm::after{
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        background-color: rgba(255, 255, 255, 0.842);
-        width: 100%;
-        height: 0;
-        transition: height .4s ease-in-out;
-    }

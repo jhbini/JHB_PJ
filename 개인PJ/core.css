@@ -5,3 +5,9 @@
 html{
     font-size: 10px;
 }
+
+
+.ibx{
+    max-width: 1500px;
+    margin: 0 auto;
+}

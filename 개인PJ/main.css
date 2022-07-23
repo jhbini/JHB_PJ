@@ -4,3 +4,52 @@
 @import url(core.css);
 @import url(common.css);
 
+/* 이미지 크기 일단 조정 */
+/* .bgc img, */.inti img, .bimg img, .lastimg img{
+    width: 50%;
+    height: 50%;
+}
+
+.cont{
+    position: relative;
+}
+
+.tmain{
+    width: 100%;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+
+.mainw{
+    position: absolute;
+    text-align: center;
+    font-size: 3rem;
+    right: 15%;
+    top: 150px;
+    line-height: 90px;
+    animation: twAni 2.5s ease-in-out; 
+}
+@keyframes twAni {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.mainw h1{
+    padding-left: 20px;
+    letter-spacing: 20px;
+}
+
+.tmain img{
+    width: 100%;
+}
+
+
+/* .mainw{
+    position: absolute;
+    background-color: #fff;
+} */
