@@ -8,15 +8,17 @@ body * {
 
 /* 1. 상단영역 */
 .logo{
-    padding: 10px;
+    padding: 15px;
 }
 
 .top{
-    padding: 20px;
+    position: relative;
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
+    
 /* 1-1 메인로고 */
 
 /* gnb메뉴 */
@@ -24,12 +26,12 @@ body * {
     display: flex;
 }
 .gnb>ul>li{
-    padding: 10px 30px 0;
+    padding: 20px 30px;
 }
 .gnb>ul>li>a{
     display: block;
-    font-size: 2rem;
-    line-height: 5rem;
+    font-size: 2.1rem;
+    line-height: 6rem;
 }
 .gnb>ul>li>a:hover{
     color: rgba(200,165,145,1);
@@ -47,13 +49,13 @@ body * {
 .smenu a{
     display: block;
     left: 0;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     line-height:4rem;
 }
 
 .gnb>ul>li:hover .smenu,
 .gnb>ul>li.tm:hover::after{
-    height: 50%;
+    height: 350px;
 }
 .gnb>ul>li.tm::after{
     content: '';
@@ -71,21 +73,25 @@ body * {
 .sns{
     display: flex;
     align-items: center;
+    width: 250px;
 }
 
 .sns>ul{
     display: flex;
-    padding-right: 5vw;
+    padding: 20px;
+}
+
+.sns>ul>li>a{
+    padding-right: 10px;
 }
 .rev{
     white-space: nowrap;
-    padding: 3px 10px;
+    padding: 3px 15px;
     border: 1px solid #000;
     border-radius: 20px;
     font-size: 1.5rem;
     cursor: pointer;
 }
-
 .rev:hover{
     background-color: rgb(56, 53, 53);
 }

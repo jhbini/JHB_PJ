@@ -10,11 +10,18 @@
     height: 50%;
 }
 
+.cont{
+    position: relative;
+}
+/* .cont::before{
+    content: '';
+    display: block;
+    padding-top: 65.66%;
+} */
 
 .tmain{
-    position: relative;
-    height: 650px;
-    overflow: hidden;
+    height: 700px;
+    /* overflow: hidden; */
     padding-top: 30px;
     margin: 0 auto;
 }
@@ -43,12 +50,13 @@
     letter-spacing: 20px;
 }
 
-.slider{
-    /* position: relative; */
-}
 .bgc{
     position: absolute;
-    /* animation: bgcAni 2s ease-in; */
+    text-align: center;
+}
+.bgc img{
+    width: 100%;
+
 }
 @keyframes bgcAni {
     from{
