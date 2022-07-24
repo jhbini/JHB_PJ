@@ -10,12 +10,11 @@
     height: 50%;
 }
 
-.cont{
-    position: relative;
-}
 
 .tmain{
-    width: 100%;
+    position: relative;
+    height: 650px;
+    overflow: hidden;
     padding-top: 30px;
     margin: 0 auto;
 }
@@ -28,7 +27,7 @@
     right: 15%;
     top: 150px;
     line-height: 90px;
-    animation: twAni 2.5s ease-in-out; 
+    animation: twAni 2.5s ease-in; 
 }
 @keyframes twAni {
     from{
@@ -44,12 +43,18 @@
     letter-spacing: 20px;
 }
 
-.tmain img{
-    width: 100%;
+.slider{
+    /* position: relative; */
 }
-
-
-/* .mainw{
+.bgc{
     position: absolute;
-    background-color: #fff;
-} */
+    /* animation: bgcAni 2s ease-in; */
+}
+@keyframes bgcAni {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

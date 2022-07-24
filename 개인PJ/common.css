@@ -3,10 +3,13 @@
 /* 상단/하단 영역 */
 
 body * {
-outline: 1px dashed gray;
+/* outline: 1px dashed gray; */
 }
 
 /* 1. 상단영역 */
+.logo{
+    padding: 10px;
+}
 
 .top{
     padding: 20px;
@@ -24,7 +27,7 @@ outline: 1px dashed gray;
     padding: 10px 30px 0;
 }
 .gnb>ul>li>a{
-display: block;
+    display: block;
     font-size: 2rem;
     line-height: 5rem;
 }
@@ -35,7 +38,7 @@ display: block;
 /* 서브메뉴 */
 .smenu{
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     height: 0;
     overflow: hidden;
     transition: height .4s ease-in-out;
@@ -55,7 +58,7 @@ display: block;
 .gnb>ul>li.tm::after{
     content: '';
     display: block;
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     left: 0;
     width: 100%;
@@ -69,6 +72,7 @@ display: block;
     display: flex;
     align-items: center;
 }
+
 .sns>ul{
     display: flex;
     padding-right: 5vw;
@@ -87,4 +91,61 @@ display: block;
 }
 .rev:hover a{
     color: #fff;
+}
+
+
+/* 2. 메인영역 */
+.cont{
+    min-height: 800px;
+}
+
+/* 상단이동버튼 */
+.icon{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+}
+.icon>a>img{
+    width: 3vw;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 5px 5px 20px rgb(79, 77, 77);
+}
+
+
+/* 3. 하단영역 */
+#info{
+    background-color: rgb(225,225,225,1);
+}
+
+.info{
+    position: relative;
+    height: 500px;
+}
+.flogo{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 200px;
+    margin-top: 250px;
+    text-align: center;
+}
+
+.flogo span{
+    font-size: 1.5rem;
+    line-height: 50px;
+    color: rgb(87, 86, 86);
+    text-align: right;
+}
+
+.cinfo{
+    position: absolute;
+    right: 50px;
+    top: 30px;
+}
+.roc{
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 45px;
 }
