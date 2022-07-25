@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 /* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Gowun+Dodum&display=swap');
+/* font-family: 'Gowun Batang', serif;
+font-family: 'Gowun Dodum', sans-serif; */
 
 html{
     font-size: 10px;
@@ -10,4 +13,11 @@ html{
 .ibx{
     max-width: 1500px;
     margin: 0 auto;
+}
+
+.ir{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
 }

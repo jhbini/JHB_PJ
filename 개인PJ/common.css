@@ -3,44 +3,50 @@
 /* 상단/하단 영역 */
 
 body * {
-/* outline: 1px dashed gray; */
+outline: 1px dashed gray;
 }
 
 /* 1. 상단영역 */
-.logo{
-    padding: 15px;
+#top{
+    position: relative;
+    padding: 10px 20px;
 }
 
 .top{
-    position: relative;
     display: flex;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
-    
+
 /* 1-1 메인로고 */
 
 /* gnb메뉴 */
 .gnb>ul{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .gnb>ul>li{
-    padding: 20px 30px;
+    padding:0 30px;
 }
 .gnb>ul>li>a{
     display: block;
-    font-size: 2.1rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Gowun Batang', serif;
     line-height: 6rem;
 }
 .gnb>ul>li>a:hover{
+    color: rgb(175, 114, 79);
+}
+.smenu>ol>li>a:hover{
     color: rgba(200,165,145,1);
 }
 
 /* 서브메뉴 */
 .smenu{
     position: absolute;
-    z-index: 3;
+    z-index: 2;
     height: 0;
     overflow: hidden;
     transition: height .4s ease-in-out;
@@ -49,8 +55,9 @@ body * {
 .smenu a{
     display: block;
     left: 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height:4rem;
+    font-family: 'Gowun Dodum', sans-serif;
 }
 
 .gnb>ul>li:hover .smenu,
@@ -60,20 +67,20 @@ body * {
 .gnb>ul>li.tm::after{
     content: '';
     display: block;
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     left: 0;
     width: 100%;
     height: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 252, 252);
     transition: height .4s ease-in-out;
 }
 
 /* sns로고 */
 .sns{
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 250px;
 }
 
 .sns>ul{
@@ -86,12 +93,17 @@ body * {
 }
 .rev{
     white-space: nowrap;
-    padding: 3px 15px;
     border: 1px solid #000;
     border-radius: 20px;
-    font-size: 1.5rem;
     cursor: pointer;
 }
+.rev>ul>li{
+    font-family: 'Gowun Batang', serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding:5px 20px;
+}
+
 .rev:hover{
     background-color: rgb(56, 53, 53);
 }
@@ -113,7 +125,7 @@ body * {
 
 }
 .icon>a>img{
-    width: 3vw;
+    width: 2.5vw;
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 5px 5px 20px rgb(79, 77, 77);
@@ -139,6 +151,7 @@ body * {
 }
 
 .flogo span{
+    font-family: 'Gowun Batang', serif;
     font-size: 1.5rem;
     line-height: 50px;
     color: rgb(87, 86, 86);
@@ -152,6 +165,7 @@ body * {
 }
 .roc{
     font-style: normal;
+    font-family: 'Gowun Batang', serif;
     font-size: 2rem;
     line-height: 45px;
 }
