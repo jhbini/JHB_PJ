@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samcheonggak</title>
     <link rel="stylesheet" href="main.css">
-   
+    <script src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -133,12 +134,12 @@
                 <!-- sns메뉴 -->
                 <ul>
                     <li>
-                        <a href="https://blog.naver.com/dg_samchunggak" target="_blank">
+                        <a href="https://blog.naver.com/dg_samchunggak" target="_blank" title="네이버블로그 바로가기">
                             <img src="./images/sns_naverBlog-gray.png" alt="네이버블로그로고">
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/sam.cheonggak/" target="_blank">
+                        <a href="https://www.instagram.com/sam.cheonggak/" target="_blank" title="인스타그램 바로가기">
                             <img src="./images/sns_instagram-gray.png" alt="인스타그램로고">
                         </a>
                     </li>
@@ -159,329 +160,339 @@
         <!-- 메인페이지1 -->
         <main class="cont">
             <!-- 메인문구 -->
-            <div class="tmwrap">
-                <div class="tmain">
-                    <!-- 배경이미지 -->
-                    <div class="slider">
+            <div class="tmain">
+                <!-- 배경이미지 -->
+                <div class="slide">
+                    <div class="simg">
                         <img src="./images/main1.jpg" alt="메인1">
-                        <img src="./images/main2.jpg" alt="메인2">
-                        <img src="./images/main3.jpg" alt="메인3">
-                        <img src="./images/main4.jpg" alt="메인4">
-                        <img src="./images/main5.jpg" alt="메인5">
                     </div>
-                    <div class="mainw">
-                        <span>전통문화예술 복합공간</span>
-                        <h1>삼청각</h1>
+                    <div class="simg">
+                        <img src="./images/main2.jpg" alt="메인2">
+                    </div>
+                    <div class="simg">
+                        <img src="./images/main3.jpg" alt="메인3">
+                    </div>
+                    <div class="simg">
+                        <img src="./images/main4.jpg" alt="메인4">
+                    </div>
+                    <div class="simg"
+                    ><img src="./images/main5.jpg" alt="메인5">
                     </div>
                 </div>
-            </div>
-            <!-- 버튼 -->
-            <div class="icon">
-                <a href="#">
-                    <img src="./images/topArrow.png" alt="위로가기">
-                </a>
+                <div class="mainw">
+                    <span>전통문화예술 복합공간</span>
+                    <h1>삼청각</h1>
+                </div>
             </div>
             <!-- 메인페이지2 -->
             <!-- 삼청각소개 -->
-            <div class="mint">
-                <!-- 이미지 박스 -->
-                <div class="intimg">
-                    <img src="./images/introduction.jpg" alt="소개이미지">
-                </div>
-                <!-- 설명 박스  -->
-                <div class="mintbx">
-                    <!-- 타이틀 -->
-                    <div class="mitit">
-                        <h2>三淸閣</h2>
-                        <span>삼청각 이야기</span>
+            <div class="mwrap ibx">
+                <div class="mint">
+                    <!-- 버튼 -->
+                    <div class="icon">
+                        <a href="#">
+                            <img src="./images/topArrow.png" alt="위로가기">
+                        </a>
                     </div>
-                    <!-- 설명 -->
-                    <p>
-                        한국의 멋과 맛 그리고 전통, 문화, 예술을 경험하다.
-                    </p>
-                    <p>
-                        북악산의 아름다운 경관속에<br>
-                        5개의 한옥과 2개의 정자, 3개의 마당이 어우러진 삼청각은<br>
-                        도심 속에서 찾기 힘든 특색있는 서울의 대표 전통문화예술 복합공간입니다.<br>
-                        2022년 4월 27일 새롭게 개관한 삼청각은<br>
-                        전통문화예술을 배우고, 즐기고, 체험할 수 있는<br>
-                        시민들의 공간으로 재탄생하였습니다.<br>
-                    </p>
-                    <p>도심속 전통문화예술 복합공간, 삼청각</p>
-                </div>
-            </div>
-            <!-- 메인페이지3 -->
-            <div class="samb">
-                <!-- 타이틀박스 -->
-                <div class="tit">
-                    <h2>삼청각의 멋</h2>
-                    <p>우리의 전통 한옥과 소담한 돌담길<br>
-                        계절의 아름다운 정취를 느끼며 즐기는<br>
-                        전통문화예술 복합공간, 삼청각</p>
-                    <span>韓屋美</span>
-                </div>
-                <!-- 건물 설명 박스 -->
-                <div class="bd">
-                    <!-- 1. 일화당 -->
-                    <!-- 건물 이미지 박스 -->
-                    <div class="bimg">
-                        <img src="./images/Ilhwadang.jpg" alt="일화당">
+                    <!-- 이미지 박스 -->
+                    <div class="intimg">
+                        <img src="./images/introduction.jpg" alt="소개이미지">
                     </div>
-                    <!-- 건물 설명박스 -->
-                    <div class="bint">
-                        <!-- 건물 타이틀 -->
-                        <h3>일화당</h3>
-                        <!-- 건물설명 -->
-                        <p>한국의 역사가 담긴 장소. <br>
-                            하나로 조화를 이루는, 일화당</p>
-                    </div>
-                    <!-- 2. 청천당 -->
-                    <!-- 건물 이미지 박스 -->
-                    <div class="bimg">
-                        <img src="./images/Cheongcheondang.jpg" alt="청천당">
-                    </div>
-                    <!-- 건물 설명박스 -->
-                    <div class="bint">
-                        <!-- 건물 타이틀 -->
-                        <h3>청천당</h3>
-                        <!-- 건물설명 -->
-                        <p>봄의 맑은 물소리로 마음과 정신을 씻는<br>
-                            그윽한 분위기의 한옥</p>
-                    </div>
-                    <!-- 3. 천추당 -->
-                    <!-- 건물 이미지 박스 -->
-                    <div class="bimg">
-                        <img src="./images/Cheonchudang.jpg" alt="천추당">
-                    </div>
-                    <!-- 건물 설명박스 -->
-                    <div class="bint">
-                        <!-- 건물 타이틀 -->
-                        <h3>천추당</h3>
-                        <!-- 건물설명 -->
-                        <p>일년 내내 청청한 가을의<br>
-                            정취를 느낄 수 있는 웰빙 한옥</p>
-                    </div>
-                    <!-- 4. 취한당 -->
-                    <!-- 건물 이미지 박스 -->
-                    <div class="bimg">
-                        <img src="./images/Chuihandang.jpg" alt="취한당">
-                    </div>
-                    <!-- 건물 설명박스 -->
-                    <div class="bint">
-                        <!-- 건물 타이틀 -->
-                        <h3>취한당</h3>
-                        <!-- 건물설명 -->
-                        <p>은은한 비취빛 향기가 드리우는<br>
-                            아담한 한옥, 취한당</p>
-                    </div>
-                    <!-- 5. 동백헌 -->
-                    <!-- 건물 이미지 박스 -->
-                    <div class="bimg">
-                        <img src="./images/Dongbaekheon.jpg" alt="동백헌">
-                    </div>
-                    <!-- 건물 설명박스 -->
-                    <div class="bint">
-                        <!-- 건물 타이틀 -->
-                        <h3>동백헌</h3>
-                        <!-- 건물설명 -->
-                        <p>동녘의 상서로운 기운으로<br>
-                            늘 정갈함을 전해주는 한옥</p>
-                    </div>
-                    <!-- 5. 유하정 -->
-                    <!-- 건물 이미지 박스 -->
-                    <div class="bimg">
-                        <img src="./images/Yuhajeong.jpg" alt="유하정">
-                    </div>
-                    <!-- 건물 설명박스 -->
-                    <div class="bint">
-                        <!-- 건물 타이틀 -->
-                        <h3>유하정</h3>
-                        <!-- 건물설명 -->
-                        <p>북악산의 아름다운 노을을<br>
-                            마음으로 감상할 수 있는 정자</p>
-                    </div>
-                    <!-- 6. 편운정 -->
-                    <!-- 건물 이미지 박스 -->
-                    <div class="bimg">
-                        <img src="./images/Pyunwoonjeong.jpg" alt="편운정">
-                    </div>
-                    <!-- 건물 설명박스 -->
-                    <div class="bint">
-                        <!-- 건물 타이틀 -->
-                        <h3>편운정</h3>
-                        <!-- 건물설명 -->
-                        <p>한 조각 구름이 드리운 쉼터</p>
-                    </div>
-                    <!-- 7. 삼청각 마당 -->
-                    <!-- 건물 이미지 박스 -->
-                    <div class="bimg">
-                        <img src="./images/Madang1.jpg" alt="삼청각 마당">
-                    </div>
-                    <!-- 건물 설명박스 -->
-                    <div class="bint">
-                        <!-- 건물 타이틀 -->
-                        <h3>삼청각 마당</h3>
-                        <!-- 건물설명 -->
-                        <p>전통 예술 공연의 향연이 펼쳐지는 곳</p>
-                    </div>
-                    <!-- 8. 삼청각 풍경 -->
-                    <!-- 건물 이미지 박스 -->
-                    <div class="bimg">
-                        <img src="./images/Landscape1.jpg" alt="삼청각 풍경">
-                    </div>
-                    <!-- 건물 설명박스 -->
-                    <div class="bint">
-                        <!-- 건물 타이틀 -->
-                        <h3>삼청각 풍경</h3>
-                        <!-- 건물설명 -->
-                        <p>삼청각에는 자연이 있습니다.<br>
-                            아름다움이 있습니다.<br>
-                            우리의 전통이 있습니다.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- 삼청각소개 스크롤바 -->
-            <div class="scroll">
-                <div class="scvar"></div>
-            </div>
-            <!-- 메인페이지4 -->
-            <div class="samex">
-                <!-- 타이틀박스 -->
-                <div class="tit">
-                    <h2>삼청각 공연 · 전시</h2>
-                    <p>삼청각의 특별한 문화, 예술 공연과 전시 행사를 만나보세요.</p>
-                    <span>삼청多樂</span>
-                </div>
-                <!-- 전시회 포스터 박스 -->
-                <div class="exh">
-                    <!-- 1. 소박한 축전 포스터 -->
-                    <img src="./images/exh1.jpg" alt="소박한축전">
-                    <!-- 전시 소개 박스 -->
-                    <div class="exint">
+                    <!-- 설명 박스  -->
+                    <div class="mintbx">
                         <!-- 타이틀 -->
-                        <h4>삼청각 재개관전 '소박한 축전祝電'</h4>
-                        <p>성북구립미술관 소장품, 소장 작가 작품 전시회</p>
-                        <!-- 전시 정보 -->
-                        <div class="exli">
-                            <ul>
-                                <li>
-                                    <span>전시기간</span> 2022-05-05 ~ 2022-08-28</li>
-                                <li>
-                                    <span>전시시간</span> 11:00 ~ 19:00 / 매주 월요일 휴관</li>
-                                <li>
-                                    <span>전시장소</span> 삼청각 취한당</li>
-                                <li>
-                                    <span>전시주최</span> 서울시, 성북구, 삼청각, 성북문화재단, 성북구립미술관</li>
-                                <li>
-                                    <span>문의</span> 02-765-3700</li>
-                            </ul>
+                        <div class="mitit">
+                            <h2>三淸閣</h2>
+                            <span>삼청각 이야기</span>
                         </div>
-                    </div>
-                    <!-- 2. 일화정담 포스터 -->
-                    <img src="./images/exh2.jpg" alt="일화정담">
-                    <!-- 전시 소개 박스 -->
-                    <div class="exint">
-                        <!-- 타이틀 -->
-                        <h4>일화정담 一龢情談 <br>
-                            수요 상설공연</h4>
-                        <p>성북구립미술관 소장품, 소장 작가 작품 전시회</p>
-                        <!-- 전시 정보 -->
-                        <div class="exli">
-                            <ul>
-                                <li>
-                                    <span>공연기간</span> 2022-04-27 ~ 2022-07-13</li>
-                                <li>
-                                    <span>공연시간</span> 매주 수요일 저녁 7시<br>
-                                    (식사 : 40분 / 인터미션 : 20분 / 공연 : 50분)</li>
-                                <li>
-                                    <span>공연장소</span> 삼청각 일화당</li>
-                                <li>
-                                    <span>가격</span> 60,000원 (VAT 포함)<br>
-                                    공연 + 식사</li>
-                                <li>
-                                    <span>예매기간</span> 2022-05-04 ~ 2022-07-13</li>
-                                <li>
-                                    <span>예매방법</span> 인터파크 예약</li>
-                                <li>
-                                    <span>문의</span> 02-765-3700</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- 3. 식문화 실기강좌 포스터 -->
-                    <img src="./images/exh3.jpg" alt="식문화 실기강좌">
-                    <!-- 전시 소개 박스 -->
-                    <div class="exint">
-                        <!-- 타이틀 -->
-                        <h4>식문화 실기강좌 </h4>
-                        <p>한국 전통 음식 조리 및 와인과 음식 강좌 프로그램</p>
-                        <!-- 전시 정보 -->
-                        <div class="exli">
-                            <ul>
-                                <li>
-                                    <span>체험기간</span> 2022-05-26 ~ 2022-07-14</li>
-                                <li>
-                                    <span>체험시간</span> 매주 목요일 11:00 ~ 13:00</li>
-                                <li>
-                                    <span>체험장소</span> 삼청각 천추당</li>
-                                <li>
-                                    <span>가격</span> 전통음식 강좌 1인 30,000원<br>
-                                    와인 강좌 1인 15,000원</li>
-                                <li>
-                                    <span>체험주최</span> 삼청각</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 메인페이지5 -->
-            <div class="lastm">
-                <!-- 메인페이지5 이미지 박스 -->
-                <div class="lastimg">
-                    <img src="images/main2.jpg" alt="마지막이미지">
-                    <h1>삼청각</h1>
-                    <span>SamcheongGak</span>
-                </div>
-                <!-- 삼청각 이용안내 -->
-                <div id="saminfo">
-                    <h2>삼청각 이용안내</h2>
-                    <div class="saminfo">
-                        <h3>오시는길 안내</h3>
-                        <p>여유로운 주차공간<br>
-                            삼청각<br>
-                            오시는 길 안내
-                        </p>
-                    </div>
-                    <div class="saminfo">
-                        <h3>상담 및 방문예약</h3>
-                        <p>섬세하게 체크하는<br>
-                            전문 컨설턴트가<br>
-                            친절하게 안내합니다.
-                        </p>
-                    </div>
-                    <div class="saminfo">
-                        <h3>삼청각 갤러리</h3>
+                        <!-- 설명 -->
                         <p>
-                            삼청각의<br>
-                            다양한 모습을<br>
-                            만나보세요.
+                            한국의 멋과 맛 그리고 전통, 문화, 예술을 경험하다.
                         </p>
+                        <p>
+                            북악산의 아름다운 경관속에<br>
+                            5개의 한옥과 2개의 정자, 3개의 마당이 어우러진 삼청각은<br>
+                            도심 속에서 찾기 힘든 특색있는 서울의 대표 전통문화예술 복합공간입니다.<br>
+                            2022년 4월 27일 새롭게 개관한 삼청각은<br>
+                            전통문화예술을 배우고, 즐기고, 체험할 수 있는<br>
+                            시민들의 공간으로 재탄생하였습니다.<br>
+                        </p>
+                        <p>도심속 전통문화예술 복합공간, 삼청각</p>
                     </div>
                 </div>
-                <!-- 삼청각 오시는길 -->
-                <div class="samload">
-                    <h2>삼청각오시는길</h2>
-                    <!-- 구글맵박스 -->
-                    <div class="gmap">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.2174115757425!2d126.9819324156304!3d37.597041930137486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbd3184998183%3A0xd19574c9bb643b4d!2z7IK87LKt6rCB!5e0!3m2!1sko!2skr!4v1658456401670!5m2!1sko!2skr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- 메인페이지3 -->
+                <div class="samb">
+                    <!-- 타이틀박스 -->
+                    <div class="tit">
+                        <h2>삼청각의 멋</h2>
+                        <p>우리의 전통 한옥과 소담한 돌담길<br>
+                            계절의 아름다운 정취를 느끼며 즐기는<br>
+                            전통문화예술 복합공간, 삼청각</p>
+                        <span>韓屋美</span>
                     </div>
-                    <h3>Address</h3>
-                    <p>
-                        서울특별시 성북구 대사관로 3 (성북동 330-115번지)<br>
-                        삼청각 / Tel 02-765-3700
-                    </p>
+                    <!-- 건물 설명 박스 -->
+                    <div class="bd">
+                        <!-- 1. 일화당 -->
+                        <!-- 건물 이미지 박스 -->
+                        <div class="bimg">
+                            <img src="./images/Ilhwadang.jpg" alt="일화당">
+                        </div>
+                        <!-- 건물 설명박스 -->
+                        <div class="bint">
+                            <!-- 건물 타이틀 -->
+                            <h3>일화당</h3>
+                            <!-- 건물설명 -->
+                            <p>한국의 역사가 담긴 장소. <br>
+                                하나로 조화를 이루는, 일화당</p>
+                        </div>
+                        <!-- 2. 청천당 -->
+                        <!-- 건물 이미지 박스 -->
+                        <div class="bimg">
+                            <img src="./images/Cheongcheondang.jpg" alt="청천당">
+                        </div>
+                        <!-- 건물 설명박스 -->
+                        <div class="bint">
+                            <!-- 건물 타이틀 -->
+                            <h3>청천당</h3>
+                            <!-- 건물설명 -->
+                            <p>봄의 맑은 물소리로 마음과 정신을 씻는<br>
+                                그윽한 분위기의 한옥</p>
+                        </div>
+                        <!-- 3. 천추당 -->
+                        <!-- 건물 이미지 박스 -->
+                        <div class="bimg">
+                            <img src="./images/Cheonchudang.jpg" alt="천추당">
+                        </div>
+                        <!-- 건물 설명박스 -->
+                        <div class="bint">
+                            <!-- 건물 타이틀 -->
+                            <h3>천추당</h3>
+                            <!-- 건물설명 -->
+                            <p>일년 내내 청청한 가을의<br>
+                                정취를 느낄 수 있는 웰빙 한옥</p>
+                        </div>
+                        <!-- 4. 취한당 -->
+                        <!-- 건물 이미지 박스 -->
+                        <div class="bimg">
+                            <img src="./images/Chuihandang.jpg" alt="취한당">
+                        </div>
+                        <!-- 건물 설명박스 -->
+                        <div class="bint">
+                            <!-- 건물 타이틀 -->
+                            <h3>취한당</h3>
+                            <!-- 건물설명 -->
+                            <p>은은한 비취빛 향기가 드리우는<br>
+                                아담한 한옥, 취한당</p>
+                        </div>
+                        <!-- 5. 동백헌 -->
+                        <!-- 건물 이미지 박스 -->
+                        <div class="bimg">
+                            <img src="./images/Dongbaekheon.jpg" alt="동백헌">
+                        </div>
+                        <!-- 건물 설명박스 -->
+                        <div class="bint">
+                            <!-- 건물 타이틀 -->
+                            <h3>동백헌</h3>
+                            <!-- 건물설명 -->
+                            <p>동녘의 상서로운 기운으로<br>
+                                늘 정갈함을 전해주는 한옥</p>
+                        </div>
+                        <!-- 5. 유하정 -->
+                        <!-- 건물 이미지 박스 -->
+                        <div class="bimg">
+                            <img src="./images/Yuhajeong.jpg" alt="유하정">
+                        </div>
+                        <!-- 건물 설명박스 -->
+                        <div class="bint">
+                            <!-- 건물 타이틀 -->
+                            <h3>유하정</h3>
+                            <!-- 건물설명 -->
+                            <p>북악산의 아름다운 노을을<br>
+                                마음으로 감상할 수 있는 정자</p>
+                        </div>
+                        <!-- 6. 편운정 -->
+                        <!-- 건물 이미지 박스 -->
+                        <div class="bimg">
+                            <img src="./images/Pyunwoonjeong.jpg" alt="편운정">
+                        </div>
+                        <!-- 건물 설명박스 -->
+                        <div class="bint">
+                            <!-- 건물 타이틀 -->
+                            <h3>편운정</h3>
+                            <!-- 건물설명 -->
+                            <p>한 조각 구름이 드리운 쉼터</p>
+                        </div>
+                        <!-- 7. 삼청각 마당 -->
+                        <!-- 건물 이미지 박스 -->
+                        <div class="bimg">
+                            <img src="./images/Madang1.jpg" alt="삼청각 마당">
+                        </div>
+                        <!-- 건물 설명박스 -->
+                        <div class="bint">
+                            <!-- 건물 타이틀 -->
+                            <h3>삼청각 마당</h3>
+                            <!-- 건물설명 -->
+                            <p>전통 예술 공연의 향연이 펼쳐지는 곳</p>
+                        </div>
+                        <!-- 8. 삼청각 풍경 -->
+                        <!-- 건물 이미지 박스 -->
+                        <div class="bimg">
+                            <img src="./images/Landscape1.jpg" alt="삼청각 풍경">
+                        </div>
+                        <!-- 건물 설명박스 -->
+                        <div class="bint">
+                            <!-- 건물 타이틀 -->
+                            <h3>삼청각 풍경</h3>
+                            <!-- 건물설명 -->
+                            <p>삼청각에는 자연이 있습니다.<br>
+                                아름다움이 있습니다.<br>
+                                우리의 전통이 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 삼청각소개 스크롤바 -->
+                <div class="scroll">
+                    <div class="scvar"></div>
+                </div>
+                <!-- 메인페이지4 -->
+                <div class="samex">
+                    <!-- 타이틀박스 -->
+                    <div class="tit">
+                        <h2>삼청각 공연 · 전시</h2>
+                        <p>삼청각의 특별한 문화, 예술 공연과 전시 행사를 만나보세요.</p>
+                        <span>삼청多樂</span>
+                    </div>
+                    <!-- 전시회 포스터 박스 -->
+                    <div class="exh">
+                        <!-- 1. 소박한 축전 포스터 -->
+                        <img src="./images/exh1.jpg" alt="소박한축전">
+                        <!-- 전시 소개 박스 -->
+                        <div class="exint">
+                            <!-- 타이틀 -->
+                            <h4>삼청각 재개관전 '소박한 축전祝電'</h4>
+                            <p>성북구립미술관 소장품, 소장 작가 작품 전시회</p>
+                            <!-- 전시 정보 -->
+                            <div class="exli">
+                                <ul>
+                                    <li>
+                                        <span>전시기간</span> 2022-05-05 ~ 2022-08-28</li>
+                                    <li>
+                                        <span>전시시간</span> 11:00 ~ 19:00 / 매주 월요일 휴관</li>
+                                    <li>
+                                        <span>전시장소</span> 삼청각 취한당</li>
+                                    <li>
+                                        <span>전시주최</span> 서울시, 성북구, 삼청각, 성북문화재단, 성북구립미술관</li>
+                                    <li>
+                                        <span>문의</span> 02-765-3700</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 2. 일화정담 포스터 -->
+                        <img src="./images/exh2.jpg" alt="일화정담">
+                        <!-- 전시 소개 박스 -->
+                        <div class="exint">
+                            <!-- 타이틀 -->
+                            <h4>일화정담 一龢情談 <br>
+                                수요 상설공연</h4>
+                            <p>성북구립미술관 소장품, 소장 작가 작품 전시회</p>
+                            <!-- 전시 정보 -->
+                            <div class="exli">
+                                <ul>
+                                    <li>
+                                        <span>공연기간</span> 2022-04-27 ~ 2022-07-13</li>
+                                    <li>
+                                        <span>공연시간</span> 매주 수요일 저녁 7시<br>
+                                        (식사 : 40분 / 인터미션 : 20분 / 공연 : 50분)</li>
+                                    <li>
+                                        <span>공연장소</span> 삼청각 일화당</li>
+                                    <li>
+                                        <span>가격</span> 60,000원 (VAT 포함)<br>
+                                        공연 + 식사</li>
+                                    <li>
+                                        <span>예매기간</span> 2022-05-04 ~ 2022-07-13</li>
+                                    <li>
+                                        <span>예매방법</span> 인터파크 예약</li>
+                                    <li>
+                                        <span>문의</span> 02-765-3700</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 3. 식문화 실기강좌 포스터 -->
+                        <img src="./images/exh3.jpg" alt="식문화 실기강좌">
+                        <!-- 전시 소개 박스 -->
+                        <div class="exint">
+                            <!-- 타이틀 -->
+                            <h4>식문화 실기강좌 </h4>
+                            <p>한국 전통 음식 조리 및 와인과 음식 강좌 프로그램</p>
+                            <!-- 전시 정보 -->
+                            <div class="exli">
+                                <ul>
+                                    <li>
+                                        <span>체험기간</span> 2022-05-26 ~ 2022-07-14</li>
+                                    <li>
+                                        <span>체험시간</span> 매주 목요일 11:00 ~ 13:00</li>
+                                    <li>
+                                        <span>체험장소</span> 삼청각 천추당</li>
+                                    <li>
+                                        <span>가격</span> 전통음식 강좌 1인 30,000원<br>
+                                        와인 강좌 1인 15,000원</li>
+                                    <li>
+                                        <span>체험주최</span> 삼청각</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 메인페이지5 -->
+                <div class="lastm">
+                    <!-- 메인페이지5 이미지 박스 -->
+                    <div class="lastimg">
+                        <img src="images/main2.jpg" alt="마지막이미지">
+                        <h1>삼청각</h1>
+                        <span>SamcheongGak</span>
+                    </div>
+                    <!-- 삼청각 이용안내 -->
+                    <div id="saminfo">
+                        <h2>삼청각 이용안내</h2>
+                        <div class="saminfo">
+                            <h3>오시는길 안내</h3>
+                            <p>여유로운 주차공간<br>
+                                삼청각<br>
+                                오시는 길 안내
+                            </p>
+                        </div>
+                        <div class="saminfo">
+                            <h3>상담 및 방문예약</h3>
+                            <p>섬세하게 체크하는<br>
+                                전문 컨설턴트가<br>
+                                친절하게 안내합니다.
+                            </p>
+                        </div>
+                        <div class="saminfo">
+                            <h3>삼청각 갤러리</h3>
+                            <p>
+                                삼청각의<br>
+                                다양한 모습을<br>
+                                만나보세요.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 삼청각 오시는길 -->
+                    <div class="samload">
+                        <h2>삼청각오시는길</h2>
+                        <!-- 구글맵박스 -->
+                        <div class="gmap">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.2174115757425!2d126.9819324156304!3d37.597041930137486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbd3184998183%3A0xd19574c9bb643b4d!2z7IK87LKt6rCB!5e0!3m2!1sko!2skr!4v1658456401670!5m2!1sko!2skr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <h3>Address</h3>
+                        <p>
+                            서울특별시 성북구 대사관로 3 (성북동 330-115번지)<br>
+                            삼청각 / Tel 02-765-3700
+                        </p>
+                    </div>
                 </div>
             </div>
         </main>
