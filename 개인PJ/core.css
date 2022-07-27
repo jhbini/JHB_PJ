@@ -2,21 +2,81 @@
 
 /* 웹폰트 */
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Gowun+Dodum&display=swap');
-/* font-family: 'Gowun Batang', serif;
-font-family: 'Gowun Dodum', sans-serif; */
-
-html{
+/* font-family: 'Gowun Dodum', sans-serif;
+font-family: 'Gowun Batang', serif; */
+html {
+    font-family: 'Gowun Batang', serif;
     font-size: 10px;
     scroll-behavior: smooth;
 }
 
-
-.ibx{
+/* 중앙속박스 */
+.ibx {
     max-width: 1400px;
     margin: 0 auto;
 }
 
-.ir{
+/* 플렉스박스 */
+.fbx {
+    display: flex;
+}
+
+/* 비율유지박스 .rbx */
+.rbx {
+    position: relative;
+}
+
+/* 가상요소 비율밀기 */
+.rbx::before {
+    content: '';
+    display: block;
+}
+
+.rbx.main1::before{
+    padding-top:46.5%;
+}
+.rbx.main2::before{
+    padding-top: 64.5%;
+}
+
+/* 비율유지 속박스
+  - 가상요소 속박스가 패딩탑으로
+  밀기때문에 내부 컨텐츠 영역을 잡는다! */
+.rbxIn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* 컨텐츠 박스의 높이값 100% */
+.cbx {
+    height: 100%;
+    position: relative;
+}
+
+/* 배경이미지 공통 class */
+.img {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 메인페이지3 배경이미지 */
+
+
+/* 메인페이지 텍스트박스 */
+h1,h2{
+    font-size: min(3vw,5rem);
+    font-family: 'Gowun Dodum', sans-serif;
+    text-align: center;
+}
+h3{
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: min(2vw,3rem);
+}
+
+.ir {
     display: block;
     width: 0;
     height: 0;

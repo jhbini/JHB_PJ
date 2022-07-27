@@ -16,7 +16,7 @@ outline: 1px dashed gray;
 }
 
 .top{
-    display: flex;
+    flex: 1;
     justify-content: space-between;
     align-items: center;
 }
@@ -24,8 +24,8 @@ outline: 1px dashed gray;
 /* 1-1 메인로고 */
 
 /* gnb메뉴 */
+
 .gnb>ul{
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -34,10 +34,9 @@ outline: 1px dashed gray;
 }
 .gnb>ul>li>a{
     display: block;
-    font-size: 1.7rem;
+    font-size: min(1vw,2rem);
     font-weight: bold;
     font-family: 'Gowun Batang', serif;
-    line-height: 6rem;
     white-space: nowrap;
 }
 .gnb>ul>li>a:hover{
@@ -54,8 +53,8 @@ outline: 1px dashed gray;
     height: 0;
     overflow: hidden;
     transition: height .4s ease-in-out;
-    /* clip-path: polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0 calc(100% - 7px), 0 7px); */
 }
+
 .smenu a{
     display: block;
     left: 0;
@@ -68,6 +67,7 @@ outline: 1px dashed gray;
 .gnb>ul>li.tm:hover::after{
     height: 350px;
 }
+
 .gnb>ul>li.tm::after{
     content: '';
     display: block;
@@ -81,13 +81,11 @@ outline: 1px dashed gray;
 
 /* sns로고 */
 .sns{
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .sns>ul{
-    display: flex;
     padding: 20px;
 }
 
@@ -103,7 +101,7 @@ outline: 1px dashed gray;
 .rev>ul>li{
     font-family: 'Gowun Batang', serif;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: min(1vw,1.4rem);
     padding:5px 20px;
 }
 
@@ -116,9 +114,9 @@ outline: 1px dashed gray;
 
 
 /* 2. 메인영역 */
-.cont{
+/* .cont{
     min-height: 800px;
-}
+} */
 
 /* 상단이동버튼 */
 .icon{
@@ -143,7 +141,7 @@ outline: 1px dashed gray;
 
 .info{
     position: relative;
-    height: 500px;
+    min-height: 500px;
 }
 .flogo{
     display: flex;
