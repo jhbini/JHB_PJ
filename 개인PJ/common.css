@@ -2,9 +2,6 @@
 
 /* 상단/하단 영역 */
 
-body * {
-outline: 1px dashed gray;
-}
 
 /* 1. 상단영역 */
 #top{
@@ -14,13 +11,10 @@ outline: 1px dashed gray;
     width: 100%;
     background-color: #fff;
 }
-
-.top{
-    flex: 1;
+.topwrap{
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
 }
-
 /* 1-1 메인로고 */
 
 /* gnb메뉴 */
@@ -31,19 +25,19 @@ outline: 1px dashed gray;
 }
 .gnb>ul>li{
     padding:0 30px;
+    line-height: 65px;
 }
 .gnb>ul>li>a{
     display: block;
-    font-size: min(1vw,2rem);
+    font-size: min(1.3vw,2rem);
     font-weight: bold;
-    font-family: 'Gowun Batang', serif;
     white-space: nowrap;
 }
 .gnb>ul>li>a:hover{
-    color: rgb(175, 114, 79);
+    color: rgb(177, 91, 40);
 }
 .smenu>ol>li>a:hover{
-    color: rgba(200,165,145,1);
+    color: rgb(199, 159, 136);
 }
 
 /* 서브메뉴 */
@@ -58,14 +52,15 @@ outline: 1px dashed gray;
 .smenu a{
     display: block;
     left: 0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     line-height:4rem;
     font-family: 'Gowun Dodum', sans-serif;
 }
 
 .gnb>ul>li:hover .smenu,
 .gnb>ul>li.tm:hover::after{
-    height: 350px;
+    height: 400px;
 }
 
 .gnb>ul>li.tm::after{
@@ -81,13 +76,9 @@ outline: 1px dashed gray;
 
 /* sns로고 */
 .sns{
-    justify-content: center;
     align-items: center;
 }
 
-.sns>ul{
-    padding: 20px;
-}
 
 .sns>ul>li>a{
     padding-right: 10px;
@@ -141,12 +132,12 @@ outline: 1px dashed gray;
 
 .info{
     position: relative;
-    min-height: 500px;
+    min-height: 600px;
 }
 .flogo{
     display: flex;
     flex-direction: column;
-    float: left;
+    /* float: left; */
     width: 200px;
     margin-top: 250px;
     text-align: center;

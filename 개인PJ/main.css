@@ -6,14 +6,14 @@
 
 /* 2. 메인영역 */
 .cont{
-    padding: 90px 0;
+    padding-top: 85px;
 }
 
 /* 메인페이지1 */
 /* .tmain{
     overflow: hidden; */
-    /* position: fixed; */
-    /* width: 100%;
+/* position: fixed; */
+/* width: 100%;
     height: 91vh;
     padding-top: 30px;
     animation: fadein 3s;
@@ -28,64 +28,118 @@
     }
 } */
 
-.mainw{
+.mainw {
     position: absolute;
     right: 30%;
-    top: 20%; 
-    font-family: 'Gowun Batang', serif;
-    font-size: min(3vw,2.5rem);
+    top: 20%;
+    font-size: min(3vw, 2.5rem);
     text-align: center;
     line-height: 2;
-    animation: twAni 3s ease-in; 
+    animation: twAni 3s ease-in;
 }
+
 @keyframes twAni {
-    from{
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
-.main1{
-    height: 91.5vh;
+.bgi{
     overflow: hidden;
 }
-.mainw h1{
+
+.mainw h1 {
     padding-left: 20px;
     letter-spacing: 30px;
 }
-.mbg1{
-    clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0 95%, 0 5%);
+
+/* 페이드인 페이드아웃 ******************/
+.slide{
+    display: flex;
+    display: block;
 }
+.slide>li{
+    position: absolute;
+}
+
+.abtn, .indic {
+    z-index: 1;
+}
+
+.abtn{
+    position: absolute;
+    bottom: 250px;
+    right: 0;
+}
+.ab1{
+    right: 200px;
+}
+.indic {
+    display: flex;
+    /* 플렉스박스 */
+    position: absolute;
+    bottom: 250px;
+    right: 0;
+}
+.indic li {
+    width: 40px;
+    height: 80px;
+    cursor: pointer;
+}
+.indic>li>img {
+    position: absolute;
+    /*이미지 겹치게*/
+}
+
+.indic>li>img:last-child {
+    /*회색이미지만 투명하게*/
+    opacity: 0;
+}
+
+/*회색블릿이미지가 보이게하는 class*/
+.indic>li.on>img:last-child {
+    /*회색이미지만 투명하게*/
+    opacity: 1;
+    /*우선적용!*/
+}
+/* 화살표 */
 
 
 /* 메인페이지2 */
-.mint{
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-}
-.mitit{
-    width: 30%;
-    font-size: 4rem;
-    font-family: 'Gowun Batang', serif;
-    font-weight: bold;
-    line-height: 1.5;
-    margin-bottom: 50px;
+.miwrap{
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-evenly;
 }
 
 .intimg>img{
-    width: 55.5%;
-    float: right;
-    transform: translate(-10%, 30%);
+    width: 700px;
+    height: 100%;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
 }
-.mintbx{
-    padding: 200px 0 0 50px;
-    font-size: 1.7rem;
+.mitit{
+    text-align: right;
+}
+.mitit>span{
     font-family: 'Gowun Dodum', sans-serif;
+    font-size: min(3vw,4rem);
 }
 
 /* 메인페이지3 */
-.bd{
+.bd {
     flex: 1;
+    width: 100%;
+}
+
+.bimg {
+    width: 327.5px;
+    margin-right: 30px;
+}
+
+.bimg>img {
+    width: 100%;
+    height: auto;
 }

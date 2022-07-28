@@ -4,6 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Gowun+Dodum&display=swap');
 /* font-family: 'Gowun Dodum', sans-serif;
 font-family: 'Gowun Batang', serif; */
+
+
+body * {
+    outline: 1px dashed gray;
+    }
+
 html {
     font-family: 'Gowun Batang', serif;
     font-size: 10px;
@@ -33,15 +39,14 @@ html {
 }
 
 .rbx.main1::before{
-    padding-top:46.5%;
-}
-.rbx.main2::before{
-    padding-top: 64.5%;
+    padding-top:56.5%;
 }
 
-/* 비율유지 속박스
-  - 가상요소 속박스가 패딩탑으로
-  밀기때문에 내부 컨텐츠 영역을 잡는다! */
+.rbx.main2::before{
+    padding-top:64.5%;
+}
+
+/* 비율유지 속박스 */
 .rbxIn {
     position: absolute;
     top: 0;
@@ -58,23 +63,27 @@ html {
 
 /* 배경이미지 공통 class */
 .img {
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
-/* 메인페이지3 배경이미지 */
 
 
 /* 메인페이지 텍스트박스 */
 h1,h2{
     font-size: min(3vw,5rem);
     font-family: 'Gowun Dodum', sans-serif;
-    text-align: center;
 }
-h3{
+h3,h4{
     font-family: 'Gowun Dodum', sans-serif;
     font-size: min(2vw,3rem);
 }
+p{
+    font-size: min(1.5vw,2rem);
+}
+
+/* 메인페이지3 배경이미지 */
+
 
 .ir {
     display: block;
