@@ -19,7 +19,7 @@ $(() => {
     // 광클 금지상태변수
     let prot = 0; // 1-불허용, 0-허용
 
-    // d애니메이션 시간변수
+    // 애니메이션 시간변수
     const aniT = 800;
 
     // 애니메이션 이징변수
@@ -64,7 +64,7 @@ $(() => {
             // eq(순번)-> 해당 순번 선택
 
             // 현재슬라이드 숨기기
-            slide.eq(sno).fadeOut(aniT,aniE);
+            slide.eq(sno).fadeOut(aniT, aniE);
             // 슬라이드 순번 1증가
             sno++;
             // 슬라이드 한계값체크 처음으로
@@ -72,7 +72,7 @@ $(() => {
             // slide.length는 li개수
             console.log("현재슬번"), sno;
             // 다음순번 슬라이드 보이기
-            slide.eq(sno).fadeIn(aniT,aniE);
+            slide.eq(sno).fadeIn(aniT, aniE);
 
         } ////////////// if //////////////
         else { // 왼쪽버튼
@@ -81,22 +81,16 @@ $(() => {
             // eq(순번)-> 해당 순번 선택
 
             // 현재슬라이드 숨기기
-            slide.eq(sno).fadeOut(aniT,aniE);
+            slide.eq(sno).fadeOut(aniT, aniE);
             // 슬라이드 순번 1증가
             sno--;
             // 슬라이드 한계값체크 처음으로
-            if (sno === -1) sno = slide.length-1;
+            if (sno === -1) sno = slide.length - 1;
             // slide.length는 li개수
             console.log("현재슬번"), sno;
             // 다음순번 슬라이드 보이기
-            slide.eq(sno).fadeIn(aniT,aniE);
+            slide.eq(sno).fadeIn(aniT, aniE);
         } //////////////// else /////////
-
-        // 3. 등장슬라이드와 같은 순번의 블릿 변경하기
-        // 현재슬라이드번호(sno)와 같은순번의 블릿 클래스on
-        indic.eq(sno).addClass("on")
-        // 다른 형제들 블릿 클래스 제거
-        .siblings().removeClass("on");
 
     }); ///////////// click //////////////
 
@@ -126,7 +120,7 @@ $(() => {
             // eq(순번)-> 해당 순번 선택
 
             // 현재슬라이드 숨기기
-            slide.eq(sno).fadeOut(aniT,aniE);
+            slide.eq(sno).fadeOut(aniT, aniE);
             // 슬라이드 순번 1증가
             sno++;
             // 슬라이드 한계값체크 처음으로
@@ -134,15 +128,15 @@ $(() => {
             // slide.length는 li개수
             console.log("현재슬번"), sno;
             // 다음순번 슬라이드 보이기
-            slide.eq(sno).fadeIn(aniT,aniE);
+            slide.eq(sno).fadeIn(aniT, aniE);
 
             // 3. 등장슬라이드와 같은 순번의 블릿 변경하기
             // 현재슬라이드번호(sno)와 같은순번의 블릿 클래스on
             indic.eq(sno).addClass("on")
-            // 다른 형제들 블릿 클래스 제거
-            .siblings().removeClass("on");
+                // 다른 형제들 블릿 클래스 제거
+                .siblings().removeClass("on");
 
-        }, 4000); ///// 인터발함수 /////
+        }, 5000); ///// 인터발함수 /////
 
 
     } //////////// autoSlide함수 ////////
@@ -162,3 +156,81 @@ $(() => {
 
 }); ///////////////////// jQB ///////////////////
 ////////////////////////////////////////////////
+
+
+$(() => {
+
+    // 1. 드래그 대상: .bd
+    let move = $(".bd");
+
+    //  박스 드래그설정
+    move.draggable({
+        axis: "x" // x축 고정
+        // 축고정 ("y"는 y축고정)
+    });
+
+    // 3. 드래그 애니메이션 설정
+    // transition을 설정하여 약간 더가는 효과를 줌
+    // 주의: ease-in을 사용하지 않는다. ease-out을 씀
+    move.css({
+        transition: "all .5s ease-out"
+    }); ///////////// css ///////////////
+
+    // 4. 드래그 위치 이동 한계 설정 ///
+    // 요구사항: 첫번째 이미지와 마지막 이미지가
+    // 화면기준선을 벗어나지 못하게 함(화면의 1/3기준)
+
+    /****************************************************** 
+        [ 요구사항 처리를 위한 이벤트 ]
+        1. mousedown 
+        - 마우스 왼쪽버튼 누르는 시점(딸)
+        2. mousseup 
+        - 마우스 왼쪽버튼 눌렀다 땔 시잠(각)
+        3. mousemove 
+        - 마우스 포인터가 선택요소 영역에서 움직일때
+
+        [ 위의 마우스 이벤트를 모바일에서 처리할 때 ]
+        1. touchstart - 손가락이 화면에 닿을때
+        2. touchend - 손가락이 화면에서 떨어질때
+        3. touchmove - 손가락이 화면에 닿은채로 움직일때
+
+        -> 여기서는 마우스 이벤트로만 코딩해도 
+        터치펀치 JS가 모바일 이벤트로 전환해준다.
+    ******************************************************/
+
+    // -> 첫번째 한계값
+    let fpt = $(window).width() / 6;
+    console.log("첫번째 한계값", fpt);
+
+    // 마지막 한계값
+    // -> 움직일 박스 전체가로크기 - 화면의 2/3크기
+    let lpt = move.width() - (fpt * 5);
+    console.log("마지막 한계값", lpt);
+
+    $("html,body")
+        .on("mousedown mouseup mousemove", () => {
+            console.log("마우스냐 터치냐");
+
+            // 1. 움직이는 박스의 left위치값
+            let mpos = move.offset().left;
+            console.log("현재left:", mpos);
+
+            // 2. 처음 한계값 체크 후 위치고정
+            if (mpos > fpt) {
+                // 첫번째 한계값에 고정
+                move.css({
+                    left: fpt + "px"
+                }); ////////// css /////////
+            } //////////// if /////////////
+
+            // 3. 마지막 한계값 체크 후 위치고정
+            if (mpos < -lpt) {
+                // 첫번째 한계값에 고정
+                move.css({
+                    left: -lpt + "px"
+                }); ////////// css /////////
+            } //////////// if /////////////
+
+        }); /////////// mousemove /////////////
+
+}) /////////// jQB ////////////////</script>
