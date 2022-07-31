@@ -34,12 +34,11 @@ html {
 }
 
 .rbx.main1::before{
-    padding-top:56.5%;
+    padding-top:85%;
 }
 
 .rbx.main2::before{
-    padding-top:56.5%;
-    background-color: #fff;
+    padding-top:80%;
 }
 
 /* 비율유지 속박스 */
@@ -49,6 +48,7 @@ html {
     left: 0;
     bottom: 0;
     right: 0;
+    background-color: #fff;
 }
 
 /* 컨텐츠 박스의 높이값 100% */
@@ -75,13 +75,16 @@ span{
     font-family: 'Gowun Dodum', sans-serif;
     font-size: 2rem;
     color:  rgb(255, 255, 255);
+    font-size: min(7vw,5rem);
     text-shadow: -1px -1px 0 rgb(200 165 145), 1px -1px 0 rgb(200 165 145), -1px 1px 0 rgb(200 165 145), 1px 1px 0 rgb(200 165 145);
 }
+.tit{
+    text-align: center;
+}
 
-
-.img{
+img{
     object-fit: cover;
-    min-width: 100%;
+    width: 100%;
     height: auto;
 }
 

@@ -9,25 +9,11 @@
     padding-top: 85px;
 }
 
-/* .tmain{
-    overflow: hidden; */
-/* position: fixed; */
-/* width: 100%;
-height: 91vh;
-padding-top: 30px;
-animation: fadein 3s;
-}
-
-@keyframes fadein {
-    from { 
-        opacity: 0; 
-    }
-    to   { 
-        opacity: 1; 
-    }
-} */
 
 /* 메인페이지1 */
+.slide>li>img{
+    width: 100%;
+}
 .mainw {
     position: absolute;
     right: 30%;
@@ -50,6 +36,7 @@ animation: fadein 3s;
 .m1wrap{
     position: fixed;
     width: 100%;
+    height: 100%;
     overflow: hidden;
     /* z-index: -1; */
     /* max-width: 100%; */
@@ -61,6 +48,7 @@ animation: fadein 3s;
 }
 
 /* 페이드인 페이드아웃 ******************/
+
 .slide{
     display: flex;
     display: block;
@@ -95,9 +83,10 @@ animation: fadein 3s;
     justify-content: space-evenly;
 }
 
-.intimg>img{
+.intimg{
     width: 700px;
-    height: 500px;
+}
+.intimg>img{
     clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
 }
 .mitit{
@@ -121,20 +110,58 @@ animation: fadein 3s;
 }
 
 .bimg>img {
-    object-fit: cover;
-    width: 100%;
-    height: 300px;
+    height: 50%;
 }
 
 /* 메인페이지4 */
 .exh{
     display: flex;
+    justify-content: space-between;
+}
+.exint{
+    width: 30%;
+    position: relative;
+}
+
+.eximg{
+    width: 100%;
+    position: absolute;
+}
+.exli{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.exli>ul{
+    background-color: rgba(255, 255, 255, 0.847);
+    /* transform: translateY(22%); */
+    
+    font-family: 'Gowun Batang', serif;
+    line-height: 3.5;
+    font-size: min(1vw,2rem);
+    white-space: nowrap;
+
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+.exint:hover ul{
+    opacity: 1;
+}
+.exli>ul>li:first-child{
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: min(2vw,2.7rem);
+    color: rgba(200,165,145,1);
+    font-weight: bold;
+    text-align: center;
+}
+.exli>ul>li:nth-child(2){
+    font-size: min(1.3vw,2rem);
+    font-weight: bold;
 }
 /* 메인페이지5 */
 .lastimg>img{
-    object-fit: none;
-    width: 100%;
-    height: 300px;
+    height: 100px;
 }
 .m5wrap{
     display: flex;
