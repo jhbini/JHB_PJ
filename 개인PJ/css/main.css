@@ -112,9 +112,9 @@
 /* 메인페이지4 */
 .exh{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
-    height: 100%;
+    height: 79%;
 }
 .exint{
     position: relative;
@@ -128,7 +128,7 @@
 
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 81%;
     background-color: rgba(255, 255, 255, 0.847);
 
     
