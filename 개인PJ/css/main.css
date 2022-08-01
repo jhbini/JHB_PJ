@@ -11,17 +11,18 @@
 
 
 /* 메인페이지1 */
-.slide>li>img{
-    width: 100%;
-}
 .mainw {
     position: absolute;
     right: 30%;
     top: 20%;
-    font-size: min(3vw, 2.5rem);
+    font-size: min(1.5vw, 3rem);
     text-align: center;
     line-height: 2;
     animation: twAni 3s ease-in;
+    background-color: rgba(255, 255, 255, 0.031);
+}
+.mainw>span{
+    color: #fff
 }
 
 @keyframes twAni {
@@ -58,22 +59,17 @@
     position: absolute;
 }
 
-.abtn, .indic {
-    z-index: 1;
-}
-
 .abtn{
     position: absolute;
-    bottom: 250px;
-    right: 0;
+    z-index: 1;
 }
 .ab1{
     left: 0;
-    top: 450px;
+    top: 400px;
 }
 .ab2{
     right: 0;
-    top: 450px;
+    top: 400px;
 }
 
 /* 메인페이지2 */
@@ -116,36 +112,35 @@
 /* 메인페이지4 */
 .exh{
     display: flex;
-    justify-content: space-between;
-}
-.exint{
-    width: 30%;
-    position: relative;
-}
-
-.eximg{
-    width: 100%;
-    position: absolute;
-}
-.exli{
-    position: absolute;
+    justify-content: space-around;
     width: 100%;
     height: 100%;
 }
+.exint{
+    position: relative;
+    width: 30%;
+}
 
-.exli>ul{
+.eximg>img{
+    position: absolute;
+}
+.exli{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-color: rgba(255, 255, 255, 0.847);
-    /* transform: translateY(22%); */
+
     
     font-family: 'Gowun Batang', serif;
-    line-height: 3.5;
-    font-size: min(1vw,2rem);
-    white-space: nowrap;
-
+    line-height: 3;
+    font-size: min(1vw,1.4rem);
+    
     opacity: 0;
     transition: opacity 0.4s ease-out;
 }
-.exint:hover ul{
+
+.exint:hover .exli{
     opacity: 1;
 }
 .exli>ul>li:first-child{
@@ -156,13 +151,24 @@
     text-align: center;
 }
 .exli>ul>li:nth-child(2){
-    font-size: min(1.3vw,2rem);
+    font-size: min(1.3vw,1.8rem);
     font-weight: bold;
 }
-/* 메인페이지5 */
-.lastimg>img{
-    height: 100px;
+.exli>button{
+    border-radius: 40px;
+    border: solid 1px #fff;
+    background-color: rgba(255, 255, 255, 0.671);
+
+    font-family: 'Gowun Batang', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    padding: 10px 20px;
+    display: block;
+    margin: 185px 0 0 270px;
 }
+
+/* 메인페이지5 */
 .m5wrap{
     display: flex;
 }

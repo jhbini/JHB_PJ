@@ -84,9 +84,6 @@
     display: flex;
 }
 
-.sns>ul>li>a{
-    padding-right: 10px;
-}
 .rev{
     border: 1px solid #000;
     border-radius: 20px;
