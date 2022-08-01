@@ -61,7 +61,6 @@ html {
 h1,h2{
     font-size: min(2.5vw,4rem);
     font-family: 'Gowun Dodum', sans-serif;
-    color: rgba(200,165,145,1);
 }
 h3,h4{
     font-family: 'Gowun Dodum', sans-serif;

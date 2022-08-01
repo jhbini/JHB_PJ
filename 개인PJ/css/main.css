@@ -19,10 +19,6 @@
     text-align: center;
     line-height: 2;
     animation: twAni 3s ease-in;
-    background-color: rgba(255, 255, 255, 0.031);
-}
-.mainw>span{
-    color: #fff
 }
 
 @keyframes twAni {

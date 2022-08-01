@@ -139,9 +139,9 @@
 .flogo{
     display: flex;
     flex-direction: column;
-    /* float: left; */
-    width: 200px;
-    text-align: center;
+    width: 100px;
+    text-align: right;
+    white-space: nowrap;
 }
 
 .flogo span{
@@ -149,7 +149,6 @@
     font-size: 1.5rem;
     line-height: 50px;
     color: rgb(87, 86, 86);
-    text-align: right;
 }
 
 .cinfo{
