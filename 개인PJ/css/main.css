@@ -49,7 +49,7 @@
 .slide{
     display: flex;
     display: block;
-    opacity: 0.8;
+    filter:brightness(0.9)
 }
 .slide>li{
     position: absolute;
@@ -108,11 +108,12 @@
 /* 메인페이지4 */
 .exh{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .exint{
     position: relative;
     width: 30%;
+    height: 594px;
 }
 
 .eximg>img{
@@ -121,6 +122,8 @@
 .exli{
     position: absolute;
     background-color: rgba(255, 255, 255, 0.847);
+    width: 100%;
+    height: 100%;
     
     font-family: 'Gowun Batang', serif;
     line-height: 3;
@@ -145,6 +148,7 @@
     font-weight: bold;
 }
 .exli>button{
+    position: absolute;
     border-radius: 40px;
     border: solid 1px #fff;
     background-color: rgba(255, 255, 255, 0.671);
@@ -153,13 +157,11 @@
     font-size: 1.5rem;
     font-weight: bold;
 
-    padding: 10px 20px;
+    padding: 7px 15px;
     display: block;
-    margin: 185px 0 0 270px;
 }
 
 /* 메인페이지5 */
-
 .m5wrap{
     display: flex;
 }

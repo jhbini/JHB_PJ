@@ -29,7 +29,7 @@
 }
 .gnb>ul>li>a{
     display: block;
-    font-size: min(1.3vw,2rem);
+    font-size: min(1.2vw,1.8rem);
     font-weight: bold;
     white-space: nowrap;
 }
@@ -139,7 +139,7 @@
 .flogo{
     display: flex;
     flex-direction: column;
-    width: 100px;
+    width: 5%;
     text-align: right;
     white-space: nowrap;
 }
