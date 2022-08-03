@@ -7,7 +7,7 @@ font-family: 'Gowun Batang', serif; */
 
 
 body * {
-    outline: 1px dashed gray;
+    /* outline: 1px dashed gray; */
     }
 
 html {
@@ -64,8 +64,7 @@ h1,h2{
 }
 h3,h4{
     font-family: 'Gowun Dodum', sans-serif;
-    font-size: min(2vw,3rem);
-    color: rgba(200,165,145,1);
+    font-size: min(2vw,2.7rem);
 }
 p{
     font-size: min(1.5vw,2rem);
