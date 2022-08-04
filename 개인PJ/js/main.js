@@ -160,12 +160,61 @@ $(() => {
 
         }); /////////// mousemove /////////////
 
-
-
-    
-
-
 }) /////////// jQB ////////////////
+
+
+$(()=> {
+    // 변경대상 .saminfo
+    let slide = $(".saminfo");
+    let prot = 0;
+    const aniT = 600;
+    const aniE = "easeInOutQuart";
+
+    $(".abtn2").click(function(){
+        if (prot) return;
+        prot = 1;
+        setTimeout(() => prot = 0, aniT);
+
+        // 오른쪽 
+        let isR = $(this).is(".rb");
+        if (isR){
+            slide.animate({
+                left: "-100%"
+            }, // CSS 설정
+            aniT, // 시간
+            aniE, // 이징
+            function () { // 이동후 실행함수
+                // append(요소) 
+                // - 자식요소로 맨뒤 추가 또는 이동
+                $(this) // slide 
+                    .append($(".saminfo", this).first())
+                    // 첫번째 li요소선택 -> 맨뒤로 이동
+                    // $(요소,this) -> 나자신 하위요소
+                    // first() 첫번째 요소
+                    // this 밑에있는 li중 첫번째를 맨뒤로 이동시켜라
+                    .css({
+                        left: "0"
+                    });
+                // 동시에 left값을 0으로 변경
+
+            }); ///////// animate //////////
+        } /////// if ////////////////////////
+        else {
+            // 왼쪽
+            slide.
+            prepend(slide.find(".saminfo").last())
+            .css({
+                left: "-100%"
+            })
+            .animate({
+                left: "0"
+            },
+            aniT, // 시간
+            aniE // 이징
+        ) ///////// animate ///////////
+        }//////////////// else /////////
+    })
+})
 
 
 

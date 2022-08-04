@@ -183,29 +183,55 @@
 .m5wrap {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
 }
-#saminfo>h4,
-.samload>h4{
-    text-align: center;
-    line-height: 3;
+#saminfo{
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+}
+#saminfo::before{
+    content: '';
+    display: block;
+    margin-top: 50%;
+}
+.samwrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.lsam{
+    position: relative;
+    display: flex;
+    width: 300%;
+    height: 95%;
+    left: 0;
+}
+.saminfo{
+    position: relative;
+    flex: 1;
 }
 
-.saminfo{
-    display: flex;
-    margin-top: 30px;
-    border: 1px solid rgb(129, 127, 127);
+ #saminfo>h4{
+    position: absolute;
 }
-.saminfo>img{
-    width: 40%;
+.abtn2 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border:solid 1px;
 }
-.binfo{
-    width: 31%;
+/* 왼쪽버튼 */
+.lb {
+    left: -50px;
+    background: url(../images/leftarrow\ \(2\).png) no-repeat center/cover;
 }
-.saminfo>h3{
-    color: #000;
-    font-size: 1.7rem;
-}
-.mapinfo{
-    margin-top: 48px;
+
+/* 오른쪽버튼 */
+.rb {
+    right: -50px;
+    background: url(../images/rightarrow\ \(2\).png) no-repeat center/cover;
 }
