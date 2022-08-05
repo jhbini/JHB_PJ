@@ -164,13 +164,18 @@ $(() => {
 
 
 $(()=> {
-    // 변경대상 .saminfo
-    let slide = $(".saminfo");
+    // 이벤트대상 .abtn2
+    // 이벤트 : click() 메서드 사용
+    // 변경대상 : .lsam
+    let slide = $(".lsam");
+    // 광클금지
     let prot = 0;
     const aniT = 600;
     const aniE = "easeInOutQuart";
 
-    $(".abtn2").click(function(){
+    $(".abtn2").click(function(e){
+        e.preventDefault();
+
         if (prot) return;
         prot = 1;
         setTimeout(() => prot = 0, aniT);
@@ -188,10 +193,10 @@ $(()=> {
                 // - 자식요소로 맨뒤 추가 또는 이동
                 $(this) // slide 
                     .append($(".saminfo", this).first())
-                    // 첫번째 li요소선택 -> 맨뒤로 이동
+                    // 첫번째 요소선택 -> 맨뒤로 이동
                     // $(요소,this) -> 나자신 하위요소
                     // first() 첫번째 요소
-                    // this 밑에있는 li중 첫번째를 맨뒤로 이동시켜라
+                    // this 밑에있는 .saminfo중 첫번째를 맨뒤로 이동시켜라
                     .css({
                         left: "0"
                     });
@@ -216,5 +221,37 @@ $(()=> {
     })
 })
 
+$(()=>{
+    let slide = $(".lsam");
+    let prot = 0;
+    const aniT = 600
+    const aniE = "easeInOutQuart"
+
+    $(".abtn2").clock(function(e){
+       e.preventDefault();
+
+        if(prot)return;
+        prot=1;
+        setTimeout(() => prot = 0, aniT);
+
+        // 오른쪽
+        let isR = $(this).is(".rb");
+        if(isR){
+            slide.animate({
+                left : "-100%"
+            }, aniT,aniE, function(){
+                $(this).append($(".smainfo",this).first())
+                .css({
+                    left : "0"
+                });
+            });
+        }
+        else{
+            slide.prepend(slide.find(".saminfo").last())
+            .css
+        }
+
+    })
+})
 
 

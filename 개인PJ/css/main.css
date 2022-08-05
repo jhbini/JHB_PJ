@@ -186,7 +186,7 @@
 }
 #saminfo{
     position: relative;
-    width: 500px;
+    width: 400px;
     max-width: 90%;
 }
 #saminfo::before{
