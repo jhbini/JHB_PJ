@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.stit{
+    font-size: 3rem;
+    line-height: 3;
+}
+.simg{
+    width: 20%;
+    height: 40%;
+}
+.extit{
+    font-size: 2rem;
+}
+.exfbx{
+    display: flex;
+}
+.exicon{
+    display: flex;
+}
+.exinfoimg{
+    width: 50%;
+}
