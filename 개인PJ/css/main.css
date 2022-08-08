@@ -123,37 +123,59 @@
 .exh {
     display: flex;
     justify-content: space-evenly;
+    height: 70%;
 }
-
-.exint {
+.exwrap{
     position: relative;
-    width: 25%;
-    height: 51vh;
+    width: 50%;
+    max-width: 90%;
 }
-
-.eximg{
+.exwrap::before{
+    content: '';
+    display: block;
+    margin-top: 30%;
+}
+#exint{
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgb(81, 81, 81);
 }
-
+.exsam{
+    position: relative;
+    display: flex;
+    width: 300%;
+    height: 100%;
+    left: 0;
+}
+.eximg{
+    width: 100%;
+}
+.exint{
+    display: flex;
+    position: relative;
+    flex: 1;
+    box-shadow: 10px 10px 10px #000;
+}
 .exli {
+    display: flex;
+    width: 100%; 
+    margin-left: 10px;
+}
+.exli ul{
     position: absolute;
     background-color: rgba(255, 255, 255, 0.847);
-    width: 94%;
-    height: 92%;
-    padding:20px 11px;
+    width: 100%;
 
     font-family: 'Gowun Batang', serif;
     line-height: 3;
     font-size: min(1vw, 1.2rem);
+    white-space: nowrap;
     font-weight: bold;
-
-    opacity: 0;
-    transition: opacity 0.4s ease-out;
 }
 
-.exint:hover .exli {
-    opacity: 1;
-}
 
 .exli>ul>li:first-child {
     font-family: 'Gowun Dodum', sans-serif;
@@ -186,51 +208,6 @@
     padding: 10px;
 }
 
-/* 메인페이지5 */
-.m5wrap {
-    display: flex;
-    justify-content: space-evenly;
-}
-#saminfo{
-    position: relative;
-    width: 400px;
-    max-width: 90%;
-}
-#saminfo::before{
-    content: '';
-    display: block;
-    margin-top: 50%;
-}
-.samwrap{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.samwrap h4,
-.samload h4{
-    padding:10px 0;
-}
-.lsam{
-    position: relative;
-    display: flex;
-    width: 300%;
-    height: 95%;
-    left: 0;
-}
-.saminfo{
-    position: relative;
-    flex: 1;
-}
-
- #saminfo>h4{
-    position: absolute;
-}
-.binfo{
-    text-align: center;
-}
 .abtn2 {
     position: absolute;
     width: 40px;
@@ -248,3 +225,30 @@
     right: -50px;
     background: url(../images/rightarrow\ \(2\).png) no-repeat center/cover;
 }
+
+/* 메인페이지5 */
+.m5wrap {
+    display: flex;
+    justify-content: space-evenly;
+}
+#saminfo h4,
+.samload h4{
+    padding: 30px 0;
+}
+.lsam{
+    position: relative;
+    width: 90%;
+}
+.saminfo{
+    display: flex;
+    align-items: center;
+}
+.saminfo img{
+    width: 50%;
+}
+
+.binfo{
+    text-align: center;
+    padding-left: 30px;
+}
+

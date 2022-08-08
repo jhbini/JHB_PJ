@@ -4,4 +4,13 @@
     .mobtn{
         display: block;
     }
+    .rev{
+        display: none;
+    }
+    .gnb{
+        display: none;
+    }
+    .topwrap{
+        padding: 0 20px;
+    }
 }

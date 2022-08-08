@@ -167,8 +167,8 @@ $(() => {
 $(()=> {
     // 이벤트대상 .abtn2
     // 이벤트 : click() 메서드 사용
-    // 변경대상 : .lsam
-    let slide = $(".lsam");
+    // 변경대상 : .exsam
+    let slide = $(".exsam");
     // 광클금지
     let prot = 0;
     const aniT = 600;
@@ -191,11 +191,11 @@ $(()=> {
             aniE, // 이징
             function () { // 이동후 실행함수
                 $(this) // slide 
-                    .append($(".saminfo", this).first())
+                    .append($(".exint", this).first())
                     // 첫번째 요소선택 -> 맨뒤로 이동
                     // $(요소,this) -> 나자신 하위요소
                     // first() 첫번째 요소
-                    // this 밑에있는 .saminfo중 첫번째를 맨뒤로 이동시켜라
+                    // this 밑에있는 .exint중 첫번째를 맨뒤로 이동시켜라
                     .css({
                         left: "0"
                     });
@@ -206,7 +206,7 @@ $(()=> {
         else {
             // 왼쪽
             slide.
-            prepend(slide.find(".saminfo").last())
+            prepend(slide.find(".exint").last())
             .css({
                 left: "-100%"
             })
@@ -290,4 +290,43 @@ $(()=>{
     }); /////////////// scroll /////////////
     //////////////////////////////////////////
 
+});
+
+$(()=>{
+    $(".gnb a, .mognb a").click(function (e) {
+        // 기본이동막기
+        e.preventDefault();
+
+        // 1. 클릭된 텍스트 읽기
+        // this는 클릭된 a요소 자신
+        let txt = $(this).text().trim();
+        console.log(txt);
+        // trim() 문자열 앞뒤공백제거
+
+        // 이동 페이지주소 변수
+        let url;
+
+        // 2. 이동버튼에 해당하는 페이지 주소 분기
+        switch (txt) {
+            case "공연·전시·체험":
+                url = "sub1";
+                break;
+            case "일화정담":
+                url = "sub2";
+                break;
+            case "식문화실기강좌":
+                url = "sub3";
+                break;
+            default:
+                url = "etc";
+        } ////////// switch case //////////
+
+        // 3. 페이지 이동하기
+        // location.href = 주소 -> 페이지이동하기
+        if (url === "etc") // 기타일경우
+            alert("현재 페이지는 오픈준비중입니다.\n전시 페이지만 들어가실 수 있습니다.");
+        else // 이동페이지일 경우
+            location.href = url + ".html";
+
+    }); /////////////////// click ///////////
 });

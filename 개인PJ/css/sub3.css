@@ -8,13 +8,9 @@
     padding-top: 85px;
 }
 
-.subex{
-    margin: 50px;
-}
-
 .stit{
     font-size: 3rem;
-    margin: 30px 0;
+    margin: 20px 0;
     border: 1px solid rgb(200 165 145);
 }
 .simg{
@@ -31,9 +27,6 @@
 .exicon{
     display: flex;
 }
-.exinfotit{
-    padding: 20px;
-}
 .exi{
    margin:0 10px;
    padding: 5px;
@@ -41,6 +34,7 @@
    border-radius: 10%;
 }
 .exinfo{
+    padding: 50px 0;
     width: 100%;
     text-align: center;
     line-height: 2;
