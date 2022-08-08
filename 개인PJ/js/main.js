@@ -47,7 +47,7 @@ $(() => {
             // 슬라이드 한계값체크 처음으로
             if (sno === slide.length) sno = 0;
             // slide.length는 li개수
-            console.log("현재슬번"), sno;
+            // console.log("현재슬번"), sno;
             // 다음순번 슬라이드 보이기
             slide.eq(sno).fadeIn(aniT, aniE);
 
@@ -126,7 +126,8 @@ $(() => {
 
     // 3. 드래그 애니메이션 설정
     move.css({
-        transition: "all .5s ease-out"
+        transition: "all .5s ease-out",
+        cursor:"grab"
     }); ///////////// css ///////////////
 
     // -> 첫번째 한계값
@@ -189,8 +190,6 @@ $(()=> {
             aniT, // 시간
             aniE, // 이징
             function () { // 이동후 실행함수
-                // append(요소) 
-                // - 자식요소로 맨뒤 추가 또는 이동
                 $(this) // slide 
                     .append($(".saminfo", this).first())
                     // 첫번째 요소선택 -> 맨뒤로 이동
@@ -218,40 +217,77 @@ $(()=> {
             aniE // 이징
         ) ///////// animate ///////////
         }//////////////// else /////////
-    })
-})
+    });
+});
+
+
 
 $(()=>{
-    let slide = $(".lsam");
-    let prot = 0;
-    const aniT = 600
-    const aniE = "easeInOutQuart"
+    let scTop;
+    // 변경대상: 위로가기버튼(.icon)
+    let tbtn = $(".icon");
+     // 각 등장액션 위치 배열변수
+     const scpos = [];
+     // 각 등장액션 요소변수
+     const scAct = $(".tit");
+     // 각 등장위치 보정값(화면크기 기준)
+     const gap = $(window).height();
+     // height()는 선택요소의 높이값
+     // 참고) width()는 가로값
 
-    $(".abtn2").clock(function(e){
-       e.preventDefault();
+     // 스크롤 등장요소(.scAct)만 위치값을 배열에 저장
+    scAct.each((idx, ele) => { // idx-순번, ele-요소
+        // console.log(idx,ele);
 
-        if(prot)return;
-        prot=1;
-        setTimeout(() => prot = 0, aniT);
+        // 위치값 변수에 넣기
+        scpos[idx] = $(ele).offset().top;
+        // offset().top -> 맨위에서부터 top 위치값 
 
-        // 오른쪽
-        let isR = $(this).is(".rb");
-        if(isR){
-            slide.animate({
-                left : "-100%"
-            }, aniT,aniE, function(){
-                $(this).append($(".smainfo",this).first())
-                .css({
-                    left : "0"
-                });
-            });
-        }
-        else{
-            slide.prepend(slide.find(".saminfo").last())
-            .css
-        }
+    }); //////////// each ///////////////
+    function scAction(n) { // n - 순번값
 
-    })
-})
+        // 해당영역일 경우 해당요소에 클래스 on넣기
+        if (
+            // 등장요소 위치전 보다 크고
+            scTop > scpos[n] - gap &&
+            // 등장요소 위치 보다 작음
+            scTop < scpos[n]
+        ) {
+            // 변경대상: .scAct -> scAct변수
+            scAct.eq(n).addClass("on");
+        } /////////////// if ///////////////////
 
+    } //////////// scAction 함수 /////////////////
+    /////////////////////////////////////////////
 
+    // 제이쿼리 메서드 : resize()
+
+    // 등장요소 위치 업데이트 하기 ///////////////
+    $(window).resize(() => {
+        // 스크롤 등장요소(.scAct)만 위치값을 배열에 저장
+        scAct.each((idx, ele) => {
+            scpos[idx] = $(ele).offset().top;
+        });
+
+        // 위치 배열값 확인
+        // console.log(scpos);
+
+    }); /////////////// resize 함수 ////////////
+
+    $(window).scroll(function (e) {
+        scTop = $(this).scrollTop();
+
+        scAct.each((idx) => scAction(idx));
+         //  위로가기 버튼 보이기/숨기기
+         if (scTop >= 300) {
+            // 변경대상: .tbtn -> tbtn변수
+            tbtn.addClass("on");
+        } /////////// if //////////
+        else { // 300미만일때
+            tbtn.removeClass("on");
+        } /////////// else /////////
+
+    }); /////////////// scroll /////////////
+    //////////////////////////////////////////
+
+});

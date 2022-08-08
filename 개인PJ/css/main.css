@@ -3,7 +3,6 @@
 @import url(reset.css);
 @import url(core.css);
 @import url(common.css);
-@import url(sub1.css);
 
 /* 2. 메인영역 */
 .cont {
@@ -61,17 +60,19 @@
 
 .abtn {
     position: absolute;
+    width: 3%;
+    background-color: rgba(255, 255, 255, 0.184);
     z-index: 1;
 }
 
 .ab1 {
     left: 0;
-    top: 400px;
+    top: 45%;
 }
 
 .ab2 {
     right: 0;
-    top: 400px;
+    top: 45%;
 }
 
 /* 메인페이지2 */
@@ -115,6 +116,10 @@
 }
 
 /* 메인페이지4 */
+.m4{
+    background-color: #fff;
+    position: relative;
+}
 .exh {
     display: flex;
     justify-content: space-evenly;
@@ -204,6 +209,10 @@
     height: 100%;
     overflow: hidden;
 }
+.samwrap h4,
+.samload h4{
+    padding:10px 0;
+}
 .lsam{
     position: relative;
     display: flex;
@@ -219,12 +228,14 @@
  #saminfo>h4{
     position: absolute;
 }
+.binfo{
+    text-align: center;
+}
 .abtn2 {
     position: absolute;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border:solid 1px;
 }
 /* 왼쪽버튼 */
 .lb {

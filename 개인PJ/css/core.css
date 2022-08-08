@@ -8,7 +8,7 @@ font-family: 'Gowun Batang', serif; */
 
 body * {
     outline: 1px dashed gray;
-    }
+}
 
 html {
     font-family: 'Gowun Batang', serif;
@@ -33,12 +33,12 @@ html {
     display: block;
 }
 
-.rbx.main1::before{
-    padding-top:56.5%;
+.rbx.main1::before {
+    padding-top: 56.5%;
 }
 
-.rbx.main2::before{
-    padding-top:56.5%;
+.rbx.main2::before {
+    padding-top: 56.5%;
 }
 
 /* 비율유지 속박스 */
@@ -53,33 +53,50 @@ html {
 
 /* 컨텐츠 박스의 높이값 100% */
 .cbx {
+    background-color: #fff;
     height: 100%;
     position: relative;
 }
 
 /* 메인페이지 텍스트박스 */
-h1,h2{
-    font-size: min(2.5vw,4rem);
+h1,
+h2 {
+    font-size: min(2.5vw, 4rem);
     font-family: 'Gowun Dodum', sans-serif;
-}
-h3,h4{
-    font-family: 'Gowun Dodum', sans-serif;
-    font-size: min(2vw,2.7rem);
-}
-p{
-    font-size: min(1.5vw,2rem);
-}
-.tit>span{
-    font-family: 'Gowun Dodum', sans-serif;
-    color:  rgb(255, 255, 255);
-    font-size: min(7vw,5rem);
-    text-shadow: -1px -1px 0 rgb(200 165 145), 1px -1px 0 rgb(200 165 145), -1px 1px 0 rgb(200 165 145), 1px 1px 0 rgb(200 165 145);
-}
-.tit{
-    text-align: center;
 }
 
-img{
+h3,
+h4 {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: min(2vw, 2.7rem);
+}
+
+p {
+    font-size: min(1.5vw, 2rem);
+}
+
+.tit>span {
+    font-family: 'Gowun Dodum', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: min(7vw, 5rem);
+    text-shadow: -1px -1px 0 rgb(200 165 145), 1px -1px 0 rgb(200 165 145), -1px 1px 0 rgb(200 165 145), 1px 1px 0 rgb(200 165 145);
+}
+
+.tit {
+    text-align: center;
+    transform: translateY(20%);
+    opacity: 0;
+    transition: .8s ease-in-out;
+    margin-bottom: 50px;
+}
+
+/* 등장 클래스 */
+.tit.on {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+img {
     object-fit: cover;
     width: 100%;
     height: auto;
