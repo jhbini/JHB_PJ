@@ -278,7 +278,6 @@ $(()=>{
 
         // 위치값 변수에 넣기
         scpos[idx] = $(ele).offset().top;
-        // offset().top -> 맨위에서부터 top 위치값 
 
     }); //////////// each ///////////////
     function scAction(n) { // n - 순번값
