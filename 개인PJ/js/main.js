@@ -119,6 +119,9 @@ $(() => {
     // 1. 드래그 대상: .bd
     let move = $(".bd");
 
+    // 스크롤바
+    let scbar = $(".scbar");
+
     //  박스 드래그설정
     move.draggable({
         axis: "x" 
@@ -130,36 +133,70 @@ $(() => {
         cursor:"grab"
     }); ///////////// css ///////////////
 
-    // -> 첫번째 한계값
-    let fpt = $(window).width() / 6;
+     // -> 첫번째 한계값
+     let fpt = 0;
 
-    // 마지막 한계값
-    // -> 움직일 박스 전체가로크기
-    let lpt = move.width() - (fpt * 5);
-
-    $("html,body")
-        .on("mousedown mouseup mousemove", () => {
-
-            // 1. 움직이는 박스의 left위치값
-            let mpos = move.offset().left;
-
-            // 2. 처음 한계값 체크 후 위치고정
-            if (mpos > fpt) {
-                // 첫번째 한계값에 고정
-                move.css({
-                    left: fpt + "px"
-                }); ////////// css /////////
-            } //////////// if /////////////
-
-            // 3. 마지막 한계값 체크 후 위치고정
-            if (mpos < -lpt) {
-                // 첫번째 한계값에 고정
-                move.css({
-                    left: -lpt + "px"
-                }); ////////// css /////////
-            } //////////// if /////////////
-
-        }); /////////// mousemove /////////////
+     // 마지막 한계값
+     // -> 움직일 박스 전체가로크기
+     let lpt = move.width() - $(window).width() + 200;
+ 
+     // 전체바트랙 크기
+     let barTrk = $('.scroll').width();
+     // 움직이는 바크기
+     let bar = scbar.width();
+     // 전체 차이수
+     let wgap = barTrk - bar;
+     
+     // 화면크기
+     let ww = $(window).width();
+     // 움직이는 박스크기
+     let tgw = move.width();
+     // 트랙차이수
+     let tgap = ww - tgw;
+ 
+     // 비례식
+     // 전체차이수 : 전체left = 트랙차이수 : 트랙left
+     // 트랙left = 전체left * 트랙차이수 / 전체차이수
+     // 트랙left = 전체left * tgap / wgap
+     console.log(`tgap:${tgap} / wgap:${wgap}`);
+ 
+ 
+ 
+     $("html,body")
+         .on("mousedown mouseup mousemove", () => {
+ 
+             // 1. 움직이는 박스의 left위치값
+             let mpos = move.offset().left;
+ 
+             // 2. 처음 한계값 체크 후 위치고정
+             if (mpos > fpt) {
+                 // 첫번째 한계값에 고정
+                 move.css({
+                     left: fpt + "px"
+                 }); ////////// css /////////
+             } //////////// if /////////////
+ 
+             // 3. 마지막 한계값 체크 후 위치고정
+             if (mpos < -lpt) {
+                 // 첫번째 한계값에 고정
+                 move.css({
+                     left: -lpt + "px"
+                 }); ////////// css /////////
+             } //////////// if /////////////
+ 
+ 
+             /////////////////////////////////////
+             //// 트랙움직이기 ////////////////
+             // 비례식
+             // 전체차이수 : 전체left = 트랙차이수 : 트랙left
+             // 트랙left = 전체left * 트랙차이수 / 전체차이수
+             // 트랙left = mpos * tgap / wgap
+             scbar.css({
+                 left: -(mpos * Math.abs(tgap) / wgap * 0.5 - 200) + "px"
+             })
+ 
+ 
+         }); /////////// mousemove /////////////
 
 }) /////////// jQB ////////////////
 
@@ -324,7 +361,7 @@ $(()=>{
         // 3. 페이지 이동하기
         // location.href = 주소 -> 페이지이동하기
         if (url === "etc") // 기타일경우
-            alert("현재 페이지는 오픈준비중입니다.\n전시 페이지만 들어가실 수 있습니다.");
+            alert("현재 페이지는 오픈준비중입니다.\n지금은 전시 페이지만 들어가실 수 있습니다.");
         else // 이동페이지일 경우
             location.href = url + ".html";
 
@@ -343,7 +380,5 @@ $(()=>{
         
         // 대상: 모바일 GNB
         $('#mobx').slideToggle(400);
-        // 애니후 높이값 재설정 호출
-        resetH();
     });
 });

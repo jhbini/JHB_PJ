@@ -1,16 +1,140 @@
 @charset "utf-8";
 
-@media screen and (max-width:1200px) {
-    .mobtn{
-        display: block;
-    }
+@media screen and (max-width:1103px) {
     .rev{
         display: none;
     }
-    .gnb{
+    .ab1 {
+        left: 0;
+        top: 35%;
+    }
+    
+    .ab2 {
+        right: 0;
+        top: 35%;
+    }
+}
+@media screen and (max-width:950px) {
+    .mobtn{
+        display: block;
+    }
+    .sns,.gnb,.abtn{
         display: none;
     }
     .topwrap{
         padding: 0 20px;
+    }
+}
+@media screen and (max-width:770px) {
+    .gmap iframe{
+        width: 300px;
+        height: 250px;
+    }
+
+    .exbtn>a{
+        font-size: 1rem;
+    }
+    .exli>ul>li:first-child {
+        font-size: 1.3rem;
+    }
+    .exli ul{
+        font-size: 1rem;
+        line-height: 2.5;
+    }
+    .saminfo img {
+        display: none;
+    }
+}
+@media screen and (max-width:670px) {
+    .eximg{
+        width: 75%;
+    }
+    .exli ul{
+        font-size: 1rem;
+        line-height: 2;
+    }
+    .gmap iframe{
+        width: 250px;
+        height: 200px;
+    }
+    .saminfo{
+        display: block;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width:650px) {
+    .intimg {
+        width: 195px;
+        padding-top: 100px;
+    }
+    .eximg img{
+        width: 100px;
+    }
+    .exli ul{
+        line-height: 1.5;
+    }
+    .exwrap{
+        width: 80%;
+    }
+    .exwrap::before {
+        margin-top: 13%;
+    }
+    .eximg {
+        width: 50%;
+    }
+}
+@media screen and (max-width:540px) {
+    .mainw{
+        right: 31%;
+    top: 10%;
+    }
+    .intimg {
+        display: none;
+    }
+    .bd{
+        margin-left: 100px;
+    height: 100px;
+    }
+    .bint{
+        width: 104px;
+    }
+    
+    .exli .exbtn {
+        bottom: 2px;
+        padding: 0px;
+    }
+    .info{
+        min-height: 300px;
+    }
+    .lsam{
+        display: flex;
+        width: 180px;
+    }
+    iframe{
+        display: none;
+    }
+}
+@media screen and (max-width:650px) {
+    .intimg {
+        width: 195px;
+        padding-top: 100px;
+    }
+    .eximg img{
+        width: 100px;
+    }
+    .exli ul{
+        line-height: 1.5;
+    }
+    .exwrap{
+        width: 80%;
+    }
+    .exwrap::before {
+        margin-top: 13%;
+    }
+    .eximg {
+        width: 50%;
+    }
+    .cinfo{
+        top: 50px;
     }
 }

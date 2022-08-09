@@ -23,7 +23,7 @@
 
 }
 .extit ul{
-    font-size: 2rem;
+    font-size: min(1vw,2rem);
     line-height: 2.5;
     margin-top: 20px;
 }

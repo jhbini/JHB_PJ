@@ -61,7 +61,7 @@ html {
 /* 메인페이지 텍스트박스 */
 h1,
 h2 {
-    font-size: min(2.7vw, 5rem);
+    font-size: min(2.3vw, 5rem);
 }
 
 h3{
@@ -72,13 +72,13 @@ h4{
 }
 
 p {
-    font-size: min(1.5vw, 2rem);
+    font-size: min(1.7vw, 2rem);
 }
 
 .tit>span {
     font-family: 'Gowun Dodum', sans-serif;
     color: rgb(255, 255, 255);
-    font-size: min(3vw, 6rem);
+    font-size: min(4vw, 6rem);
     text-shadow: -1px -1px 0 rgb(200 165 145), 1px -1px 0 rgb(200 165 145), -1px 1px 0 rgb(200 165 145), 1px 1px 0 rgb(200 165 145);
 }
 
