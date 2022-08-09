@@ -78,6 +78,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-right: 30px;
 }
 .sns>ul{
     display: flex;
@@ -104,10 +105,11 @@
 
 /* 모바일 햄버거 버튼 */
 .mobtn{
+    position: absolute;
     width: 21px;
     height: 21px;
     top: 50%;
-    color: #000;
+    transform: translateY(-50%);
     /* 세로중앙이동 */
     display: none;
     /* 처음에 안보임 */
@@ -115,19 +117,21 @@
 /* 모바일용 햄버거 버튼 */
 .hbtn{
     right: 10px;
-    font-size: 15px;
+    font-size: 19px;
+    color: rgb(149, 149, 149);
 }
-
 /* 모바일 GNB메뉴 */
 #mobx{
-    padding-left: 15px;
-    padding-top: 6px;
-    padding-bottom: 30px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-width:480px;
+    position: fixed;
     background-color: #fff;
     display: none;
 
     overflow-y: auto;
-    height: calc(100vh - 54px);
+    /* height: calc(100vh - 54px); */
 }
 .mognb a{
     margin-top: 24px;
@@ -193,9 +197,15 @@
 .flogo{
     display: flex;
     flex-direction: column;
-    width: 7%;
-    text-align: right;
     white-space: nowrap;
+    padding-top: 20px;
+}
+.flogo p{
+    font-size: min(2vw,3rem);
+}
+.flogo a{
+    bottom:0;
+    width: 7%;
 }
 
 .flogo span{

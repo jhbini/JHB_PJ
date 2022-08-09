@@ -61,14 +61,14 @@ html {
 /* 메인페이지 텍스트박스 */
 h1,
 h2 {
-    font-size: min(2.5vw, 4rem);
-    font-family: 'Gowun Dodum', sans-serif;
+    font-size: min(2.7vw, 5rem);
 }
 
-h3,
-h4 {
-    font-family: 'Gowun Dodum', sans-serif;
+h3{
     font-size: min(2vw, 2.7rem);
+}
+h4{
+    font-size: min(2vw, 3rem);
 }
 
 p {
@@ -78,7 +78,7 @@ p {
 .tit>span {
     font-family: 'Gowun Dodum', sans-serif;
     color: rgb(255, 255, 255);
-    font-size: min(7vw, 5rem);
+    font-size: min(3vw, 6rem);
     text-shadow: -1px -1px 0 rgb(200 165 145), 1px -1px 0 rgb(200 165 145), -1px 1px 0 rgb(200 165 145), 1px 1px 0 rgb(200 165 145);
 }
 
@@ -87,7 +87,10 @@ p {
     transform: translateY(20%);
     opacity: 0;
     transition: .8s ease-in-out;
-    margin-bottom: 50px;
+}
+
+.tit>p{
+    font-size: min(2vw, 2.2rem);
 }
 
 /* 등장 클래스 */

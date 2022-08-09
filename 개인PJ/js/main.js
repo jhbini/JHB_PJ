@@ -330,3 +330,20 @@ $(()=>{
 
     }); /////////////////// click ///////////
 });
+
+
+// 메인로고 링크 셋팅하기
+// $(".logo a").click(() =>
+//         location.href = 'index.html');
+
+
+$(()=>{
+    $('.hbtn').click((e) => {
+        e.preventDefault();
+        
+        // 대상: 모바일 GNB
+        $('#mobx').slideToggle(400);
+        // 애니후 높이값 재설정 호출
+        resetH();
+    });
+});

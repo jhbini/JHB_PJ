@@ -100,6 +100,9 @@
 }
 
 /* 메인페이지3 */
+.bgc{
+    background-color: rgba(207, 206, 206, 0.52);
+}
 .bd {
     position: absolute;
     display: flex;
@@ -107,7 +110,7 @@
 }
 
 .bimg {
-    width: 400px;
+    width: 22vw;
     margin-right: 30px;
 }
 
@@ -122,12 +125,12 @@
 }
 .exh {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 70%;
 }
 .exwrap{
     position: relative;
-    width: 50%;
+    width: 53%;
     max-width: 90%;
 }
 .exwrap::before{
@@ -141,7 +144,8 @@
     left: 0;
     width: 100%;
     overflow: hidden;
-    box-shadow: 10px 10px 10px rgb(81, 81, 81);
+    border: 1px solid rgb(179, 176, 176);
+    box-shadow: 10px 10px 10px rgb(116, 116, 116);
 }
 .exsam{
     position: relative;
@@ -171,7 +175,7 @@
 
     font-family: 'Gowun Batang', serif;
     line-height: 3;
-    font-size: min(1vw, 1.2rem);
+    font-size: min(1vw, 1.3rem);
     white-space: nowrap;
     font-weight: bold;
 }
@@ -189,15 +193,16 @@
     font-weight: bold;
 }
 
-.exbtn {
+.exli .exbtn {
     position: absolute;
     border-radius: 30px;
     border: solid 1px rgb(50, 50, 50);
-    background-color: rgba(255, 249, 249, 0.671);
+    background-color: rgba(215, 214, 214, 0.671);
 
     display: block;
     right: 10px;
     bottom: 10px;
+    padding: 5px;
 }
 
 .exbtn>a{
@@ -205,7 +210,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: rgb(50, 50, 50);
-    padding: 10px;
+    padding: 5px;
 }
 
 .abtn2 {
@@ -229,26 +234,69 @@
 /* 메인페이지5 */
 .m5wrap {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
+.infoimg{
+    position: relative;
+}
+.infoimg img{
+    width: 100%;
+    height: 200px;
+    filter: brightness(0.9);
+}
+.latit{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 27%;
+    z-index: 1;
+}
+.infoimg span{
+    color: #fff;
+    text-shadow: -1px -1px 0 rgb(200 165 145), 1px -1px 0 rgb(200 165 145), -1px 1px 0 rgb(200 165 145), 1px 1px 0 rgb(200 165 145);
+    font-size: min(3rem);
+}
+
+#saminfo{
+    width: 30%;
+}
+.samload{
+    width: 50%;
+}
+
 #saminfo h4,
 .samload h4{
-    padding: 30px 0;
+    padding: 20px 0;
 }
 .lsam{
     position: relative;
-    width: 90%;
 }
 .saminfo{
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px rgb(234, 233, 233);
 }
 .saminfo img{
-    width: 50%;
+    width: 60%;
 }
 
 .binfo{
-    text-align: center;
-    padding-left: 30px;
+    margin: 0 auto;
 }
-
+.binfo h3{
+    color: rgb(88, 86, 86);
+    font-size: min(1.3vw,2rem);
+}
+.binfo span{
+    font-size: min(1vw,1.2rem);
+}
+.binfo p{
+    font-size: min(1vw,1.5rem);
+}
+.mapinfo{
+    text-align: left;
+}
+.mapinfo p{
+    font-size: min(1vw,1.5rem);
+}
