@@ -20,10 +20,12 @@
     .mobtn {
         display: block;
     }
+
     .mainw {
         left: 35%;
         top: 20%;
     }
+
     .sns,
     .gnb,
     .abtn {
@@ -57,19 +59,21 @@
         font-size: 1rem;
         line-height: 2.5;
     }
+
     .eximg {
         width: 75%;
     }
-    
+
     .exli ul {
         font-size: 1rem;
         line-height: 2;
     }
+
     #saminfo {
         width: 42%;
     }
 
-    
+
 }
 
 @media screen and (max-width:650px) {
@@ -89,14 +93,17 @@
         left: -10%;
         top: 30%;
     }
+
     .intimg {
         width: 370px;
     }
-    .bimg{
+
+    .bimg {
         width: 40vw;
         height: 30vh;
     }
-    .bd{
+
+    .bd {
         margin-left: 100px;
     }
 
@@ -140,66 +147,87 @@
     .rbx.main1::before {
         padding-top: 170%;
     }
-    .m1wrap {
-        width: 270%;
-    }
     .rbx.main2::before {
         padding-top: 110%;
+    }
+
+    .m1wrap {
+        width: 270%;
     }
     .mainw {
         left: -20%;
         top: 35%;
     }
-    .bimg{
+
+    .bimg {
         width: 60vw;
         height: 40vh;
     }
-    #saminfo, .saminfo img {
-        width: 100%;
+
+    #saminfo,
+    .saminfo img {
+        width: 95%;
+        margin: 0 auto;
     }
-    .lsam{
+
+    .lsam {
         display: flex;
     }
-    .m5wrap,.saminfo{
+
+    .m5wrap,
+    .saminfo {
         display: block;
     }
+
     .gmap iframe {
         width: 200px;
         height: 120px;
     }
+
     .samload {
         width: 100%;
     }
-    .gmap{
+
+    .gmap {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .exwrap::before {
         margin-top: 22%;
     }
-    #saminfo h4,.samload h4 {
+
+    #saminfo h4,
+    .samload h4 {
         padding: 5px;
     }
+
     .exwrap {
         width: 90%;
     }
+
     .exwrap::before {
         margin-top: 27%;
     }
-    .lb{
+
+    .lb {
         left: -10px;
     }
-    .rb{
+
+    .rb {
         right: -10px;
     }
-    .icon{
+
+    .icon {
         width: 5.5%;
     }
-    .topwrap{
+
+    .topwrap {
         padding-top: 5px;
     }
-    .logo{
+
+    .logo {
         width: 40%;
     }
 }

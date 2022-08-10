@@ -110,7 +110,7 @@
 }
 
 .bimg {
-    width: 22vw;
+    width: 23vw;
     margin-right: 30px;
 }
 
@@ -253,7 +253,8 @@
 /* 메인페이지5 */
 .m5wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 30px;
 }
 
 #saminfo{
