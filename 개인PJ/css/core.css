@@ -87,6 +87,7 @@ p {
     transform: translateY(20%);
     opacity: 0;
     transition: .8s ease-in-out;
+    padding: 10px 0;
 }
 
 .tit>p{
