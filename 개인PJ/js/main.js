@@ -120,7 +120,7 @@ $(() => {
     let move = $(".bd");
 
     // 스크롤바
-    let scbar = $(".scbar");
+    // let scbar = $(".scbar");
 
     //  박스 드래그설정
     move.draggable({
@@ -141,24 +141,24 @@ $(() => {
      let lpt = move.width() - $(window).width() + 200;
  
      // 전체바트랙 크기
-     let barTrk = $('.scroll').width();
-     // 움직이는 바크기
-     let bar = scbar.width();
-     // 전체 차이수
-     let wgap = barTrk - bar;
+    //  let barTrk = $('.scroll').width();
+    //  // 움직이는 바크기
+    //  let bar = scbar.width();
+    //  // 전체 차이수
+    //  let wgap = barTrk - bar;
      
-     // 화면크기
-     let ww = $(window).width();
-     // 움직이는 박스크기
-     let tgw = move.width();
-     // 트랙차이수
-     let tgap = ww - tgw;
+    //  // 화면크기
+    //  let ww = $(window).width();
+    //  // 움직이는 박스크기
+    //  let tgw = move.width();
+    //  // 트랙차이수
+    //  let tgap = ww - tgw;
  
      // 비례식
      // 전체차이수 : 전체left = 트랙차이수 : 트랙left
      // 트랙left = 전체left * 트랙차이수 / 전체차이수
      // 트랙left = 전체left * tgap / wgap
-     console.log(`tgap:${tgap} / wgap:${wgap}`);
+    //  console.log(`tgap:${tgap} / wgap:${wgap}`);
  
  
  
@@ -191,9 +191,9 @@ $(() => {
              // 전체차이수 : 전체left = 트랙차이수 : 트랙left
              // 트랙left = 전체left * 트랙차이수 / 전체차이수
              // 트랙left = mpos * tgap / wgap
-             scbar.css({
-                 left: -(mpos * Math.abs(tgap) / wgap * 0.5 - 200) + "px"
-             })
+            //  scbar.css({
+            //      left: -(mpos * Math.abs(tgap) / wgap * 0.5 - 200) + "px"
+            //  })
  
  
          }); /////////// mousemove /////////////
@@ -347,12 +347,6 @@ $(()=>{
             case "공연·전시·체험":
                 url = "sub1";
                 break;
-            case "일화정담":
-                url = "sub2";
-                break;
-            case "식문화실기강좌":
-                url = "sub3";
-                break;
             default:
                 url = "etc";
         } ////////// switch case //////////
@@ -367,12 +361,6 @@ $(()=>{
     }); /////////////////// click ///////////
 });
 
-
-// 메인로고 링크 셋팅하기
-// $(".logo a").click(() =>
-//         location.href = 'index.html');
-
-
 $(()=>{
     $('.hbtn').click((e) => {
         e.preventDefault();
@@ -381,3 +369,7 @@ $(()=>{
         $('#mobx').slideToggle(400);
     });
 });
+
+
+
+

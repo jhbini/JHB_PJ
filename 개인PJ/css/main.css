@@ -13,8 +13,8 @@
 /* 메인페이지1 */
 .mainw {
     position: absolute;
-    right: 30%;
-    top: 20%;
+    right: 40%;
+    top: 30%;
     font-size: min(1.5vw, 3rem);
     text-align: center;
     line-height: 2;
@@ -117,7 +117,7 @@
 .bimg>img {
     height: 50%;
 }
-.cbxP {
+/* .cbxP {
     position: relative;
   }
   .scroll {
@@ -136,7 +136,7 @@
     height: 4px;
     background-color: rgb(250, 249, 249);
     transition: left 0.3s ease-out;
-  }
+  } */
 
 /* 메인페이지4 */
 .m4{
@@ -196,7 +196,6 @@
     font-family: 'Gowun Batang', serif;
     line-height: 3;
     font-size: min(1vw, 1.3rem);
-    white-space: nowrap;
     font-weight: bold;
 }
 
@@ -242,13 +241,13 @@
 /* 왼쪽버튼 */
 .lb {
     left: -50px;
-    background: url(../images/leftarrow\ \(2\).png) no-repeat center/cover;
+    background: url(../images/leftarrow\(2\).png) no-repeat center/cover;
 }
 
 /* 오른쪽버튼 */
 .rb {
     right: -50px;
-    background: url(../images/rightarrow\ \(2\).png) no-repeat center/cover;
+    background: url(../images/rightarrow\(2\).png) no-repeat center/cover;
 }
 
 /* 메인페이지5 */
@@ -273,7 +272,6 @@
 }
 .saminfo{
     display: flex;
-    align-items: center;
     margin-bottom: 20px;
     box-shadow: 5px 5px 10px rgb(234, 233, 233);
 }
@@ -295,5 +293,8 @@
     font-size: min(1vw,1.5rem);
 }
 .mapinfo p{
-    font-size: min(1vw,1.5rem);
+    font-size: min(1.3vw,1.5rem);
+}
+.gmap iframe{
+    width: 100%;
 }

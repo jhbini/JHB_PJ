@@ -1,140 +1,205 @@
 @charset "utf-8";
 
 @media screen and (max-width:1103px) {
-    .rev{
+    .rev {
         display: none;
     }
+
     .ab1 {
         left: 0;
         top: 35%;
     }
-    
+
     .ab2 {
         right: 0;
         top: 35%;
     }
 }
-@media screen and (max-width:950px) {
-    .mobtn{
+
+@media screen and (max-width:970px) {
+    .mobtn {
         display: block;
     }
-    .sns,.gnb,.abtn{
+    .mainw {
+        left: 35%;
+        top: 20%;
+    }
+    .sns,
+    .gnb,
+    .abtn {
         display: none;
     }
-    .topwrap{
+
+    .topwrap {
         padding: 0 20px;
     }
-}
-@media screen and (max-width:770px) {
-    .gmap iframe{
+
+    .gmap iframe {
         width: 300px;
         height: 250px;
     }
+}
 
-    .exbtn>a{
+@media screen and (max-width:780px) {
+    .rbx.main2::before {
+        padding-top: 65%;
+    }
+
+    .exbtn>a {
         font-size: 1rem;
     }
+
     .exli>ul>li:first-child {
         font-size: 1.3rem;
     }
-    .exli ul{
+
+    .exli ul {
         font-size: 1rem;
         line-height: 2.5;
     }
-    .saminfo img {
-        display: none;
-    }
-}
-@media screen and (max-width:670px) {
-    .eximg{
+    .eximg {
         width: 75%;
     }
-    .exli ul{
+    
+    .exli ul {
         font-size: 1rem;
         line-height: 2;
     }
-    .gmap iframe{
-        width: 250px;
-        height: 200px;
+    #saminfo {
+        width: 42%;
     }
-    .saminfo{
-        display: block;
-        margin-bottom: 0;
-    }
+
+    
 }
+
 @media screen and (max-width:650px) {
-    .intimg {
-        width: 195px;
-        padding-top: 100px;
+    .rbx.main1::before {
+        padding-top: 120%;
     }
-    .eximg img{
-        width: 100px;
+
+    .rbx.main2::before {
+        padding-top: 80%;
     }
-    .exli ul{
-        line-height: 1.5;
+
+    .m1wrap {
+        width: 215%;
     }
-    .exwrap{
-        width: 80%;
-    }
-    .exwrap::before {
-        margin-top: 13%;
-    }
-    .eximg {
-        width: 50%;
-    }
-}
-@media screen and (max-width:540px) {
-    .mainw{
-        right: 31%;
-    top: 10%;
+
+    .mainw {
+        left: -10%;
+        top: 30%;
     }
     .intimg {
-        display: none;
+        width: 370px;
+    }
+    .bimg{
+        width: 40vw;
+        height: 30vh;
     }
     .bd{
         margin-left: 100px;
-    height: 100px;
     }
-    .bint{
-        width: 104px;
+
+    .eximg img {
+        width: 150px;
     }
-    
+
+    .exli ul {
+        line-height: 1.5;
+    }
+
+    .exwrap {
+        width: 80%;
+    }
+
+    .exwrap::before {
+        margin-top: 15%;
+    }
+
+    .eximg {
+        width: 50%;
+    }
+
     .exli .exbtn {
         bottom: 2px;
         padding: 0px;
     }
-    .info{
+
+    .info {
         min-height: 300px;
+    }
+
+    .gmap iframe {
+        width: 200px;
+        height: 250px;
+    }
+}
+
+
+@media screen and (max-width:490px) {
+    .rbx.main1::before {
+        padding-top: 170%;
+    }
+    .m1wrap {
+        width: 270%;
+    }
+    .rbx.main2::before {
+        padding-top: 110%;
+    }
+    .mainw {
+        left: -20%;
+        top: 35%;
+    }
+    .bimg{
+        width: 60vw;
+        height: 40vh;
+    }
+    #saminfo, .saminfo img {
+        width: 100%;
     }
     .lsam{
         display: flex;
-        width: 180px;
     }
-    iframe{
-        display: none;
+    .m5wrap,.saminfo{
+        display: block;
     }
-}
-@media screen and (max-width:650px) {
-    .intimg {
-        width: 195px;
-        padding-top: 100px;
+    .gmap iframe {
+        width: 200px;
+        height: 120px;
     }
-    .eximg img{
-        width: 100px;
+    .samload {
+        width: 100%;
     }
-    .exli ul{
-        line-height: 1.5;
-    }
-    .exwrap{
-        width: 80%;
+    .gmap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .exwrap::before {
-        margin-top: 13%;
+        margin-top: 22%;
     }
-    .eximg {
-        width: 50%;
+    #saminfo h4,.samload h4 {
+        padding: 5px;
     }
-    .cinfo{
-        top: 50px;
+    .exwrap {
+        width: 90%;
+    }
+    .exwrap::before {
+        margin-top: 27%;
+    }
+    .lb{
+        left: -10px;
+    }
+    .rb{
+        right: -10px;
+    }
+    .icon{
+        width: 5.5%;
+    }
+    .topwrap{
+        padding-top: 5px;
+    }
+    .logo{
+        width: 40%;
     }
 }
