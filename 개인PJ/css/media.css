@@ -72,6 +72,9 @@
     #saminfo {
         width: 42%;
     }
+    .info{
+        min-height: 400px;
+    }
 
 
 }
@@ -140,10 +143,14 @@
         width: 200px;
         height: 250px;
     }
+    .cinfo {
+        right: 30px;
+        top: 20px;
+    }
 }
 
 
-@media screen and (max-width:490px) {
+@media screen and (max-width:530px) {
     .rbx.main1::before {
         padding-top: 170%;
     }

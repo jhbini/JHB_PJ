@@ -199,19 +199,19 @@
     display: flex;
     flex-direction: column;
     white-space: nowrap;
-    padding-top: 20px;
+    padding: 20px;
 }
 .flogo p{
     font-size: min(2vw,3rem);
 }
 .flogo a{
     bottom:0;
-    width: 7%;
+    width: 8%;
 }
 
 .flogo span{
     font-family: 'Gowun Batang', serif;
-    font-size: 1.5rem;
+    font-size: min(1.2vw,1.5rem);
     line-height: 50px;
     color: rgb(87, 86, 86);
 }
